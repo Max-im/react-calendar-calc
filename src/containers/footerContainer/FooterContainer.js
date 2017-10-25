@@ -1,7 +1,7 @@
 import React from 'react';
-import './Footer.css';
+import './FooterContainer.css';
 
-function Foorer(props) {
+function FoorerContainer(props) {
   return (
     <footer className="footer">
       footer
@@ -10,6 +10,6 @@ function Foorer(props) {
 }
 
 
-export default Foorer;
+export default FoorerContainer;
 
 

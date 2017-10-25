@@ -9,6 +9,7 @@ import App from './components/app/App';
 import About from './components/about/About';
 import Calc from './components/calc/Calc';
 import Contacts from './components/contacts/Contacts';
+import NotFound from './containers/notFound/NotFound';
 
 
 ReactDOM.render(
@@ -18,6 +19,7 @@ ReactDOM.render(
       <IndexRoute component={ About } />
       <Route  path="/calc" component={ Calc } />
       <Route  path="/contacts" component={ Contacts } />
+      <Route  path="/*" component={ NotFound } />
     </Route>
   </Router>, 
 

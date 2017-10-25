@@ -1,10 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router';
 import './NotFound.css';
 
 function NotFound(props) {
   return (
-    <div className="header">
+    <div className="notFound">
       404
     </div>
   );

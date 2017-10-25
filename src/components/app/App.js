@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import logo from '../../assets/logo.svg';
 
 import './App.css';
-import Header from '../../containers/header/Header';
-import Footer from '../../containers/footer/Footer';
+import Header from '../header/Header';
+import Footer from '../footer/Footer';
 
 class App extends Component {
   render() {

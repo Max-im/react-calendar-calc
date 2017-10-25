@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "jquery": "^3.2.1",
     "node-sass-chokidar": "0.0.3",
     "npm-run-all": "^4.1.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-router": "^3.2.0",
-    "react-scripts": "1.0.14"
+    "react-scripts": "1.0.14",
+    "react-window-resize-listener": "^1.1.0"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",

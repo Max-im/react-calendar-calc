@@ -1,0 +1,41 @@
+.header__navList {
+  display: flex; }
+
+.header__navItem {
+  padding: 10px 30px;
+  transition: all .3s;
+  color: #fff; }
+  .header__navItem:hover {
+    opacity: .6;
+    transition: all .3s; }
+
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .header__navList {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    z-index: 100;
+    background: #213b82; }
+  .header__navLi {
+    width: 100%;
+    display: block;
+    text-align: center; }
+  .header__navItem {
+    padding: 10px 0px;
+    display: block; } }
+
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */
+/*==========  Mobile First Method  ==========*/
+/* Custom, iPhone Retina */
+/* Extra Small Devices, Phones */
+/* Small Devices, Tablets */
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */
