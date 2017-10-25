@@ -8,7 +8,10 @@ function HeaderContainer(props) {
       <li 
         key={item.name}
         className="header__navLi">
-        <Link to={item.path} className="header__navItem">
+        <Link 
+          to={item.path} 
+          onClick={props.clickHand}
+          className="header__navItem">
           {item.name}
         </Link>
       </li>

@@ -9,6 +9,7 @@ const menuNames = [
   {name: 'Contact us', path: '/contacts'}
 ];
 
+
 function resizeControll(e){
   if( window.innerWidth > 768 ){
     this.setState({ ind : false })    
@@ -27,7 +28,9 @@ class Header extends Component {
   }
 
   toggleState() {
-    this.setState({ind: !this.state.ind});
+    if( window.innerWidth < 768 ){
+      this.setState({ ind : !this.state.ind })    
+    }
   }
 
   render() {
@@ -50,8 +53,13 @@ class Header extends Component {
               <div className="sw-bottom"></div>
               <div className="sw-footer"></div>
             </div>
+
+
             <div className={this.state.ind ? 'hide' : ''}>
-              <HeaderContainer data={menuNames} />
+              <HeaderContainer 
+                data={menuNames} 
+                clickHand={this.toggleState.bind(this)}
+              />
             </div>
 
           </nav>
