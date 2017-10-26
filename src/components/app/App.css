@@ -6,6 +6,10 @@
   .container_flex {
     display: flex; }
 
+ul {
+  margin: 0;
+  padding: 0; }
+
 li {
   list-style: none; }
 
@@ -18,11 +22,16 @@ body {
 
 .App {
   display: flex;
-  flex-wrap: wrap;
-  min-height: 100vh; }
-
-.hide {
-  display: none !important; }
+  flex-direction: column;
+  min-height: 100vh;
+  background: #fafbfc;
+  align-content: space-between; }
+  .App__header {
+    font-size: 40px;
+    font-weight: 100; }
 
 .main {
   flex-grow: 1; }
+
+.hide {
+  display: none !important; }
