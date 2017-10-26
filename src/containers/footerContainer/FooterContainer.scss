@@ -1,3 +1,22 @@
+.footer{
+  &__list{
+    display: flex;
+  }
+  &__link{
+    display: block;
+    padding: 5px 15px;
+    font-size: 14px;
+    color: rgb(163,174,190);
+    transition: all .3s;
+    &:hover{
+      opacity: .6;
+      transition: all .3s;
+    }
+  }
+}
+
+
+
 
  /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
@@ -24,7 +43,18 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
- 
+ .footer{
+  &__list{
+    width: 100%;
+    padding: 0;
+  }
+  &__link{
+    display: block;
+    padding: 5px;
+    font-size: 14px;
+  }
+}
+
 
 }
 

@@ -1,6 +1,37 @@
+.footer {
+  height: 60px;
+  flex-grow: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #214065, #16184c); }
+  .footer__container {
+    justify-content: space-between;
+    height: 100%;
+    align-items: center; }
+  .footer__copyright {
+    color: #a3aebe;
+    font-size: 14px;
+    padding: 0 0 0 15px;
+    line-height: 60px; }
+
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */
 /* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .footer {
+    height: 120px; }
+    .footer__container {
+      justify-content: center;
+      height: 100%;
+      align-items: flex-start;
+      flex-wrap: wrap; }
+    .footer__copyrightWrap {
+      width: 100%;
+      text-align: center; }
+    .footer__copyright {
+      color: #a3aebe;
+      font-size: 14px;
+      padding: 0px; } }
+
 /* Extra Small Devices, Phones */
 /* Custom, iPhone Retina */
 /*==========  Mobile First Method  ==========*/

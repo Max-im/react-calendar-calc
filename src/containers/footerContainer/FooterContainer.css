@@ -1,6 +1,28 @@
+.footer__list {
+  display: flex; }
+
+.footer__link {
+  display: block;
+  padding: 5px 15px;
+  font-size: 14px;
+  color: #a3aebe;
+  transition: all .3s; }
+  .footer__link:hover {
+    opacity: .6;
+    transition: all .3s; }
+
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */
 /* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .footer__list {
+    width: 100%;
+    padding: 0; }
+  .footer__link {
+    display: block;
+    padding: 5px;
+    font-size: 14px; } }
+
 /* Extra Small Devices, Phones */
 /* Custom, iPhone Retina */
 /*==========  Mobile First Method  ==========*/

@@ -1,7 +1,8 @@
 .header {
   width: 100%;
   height: 60px;
-  background: #213b82; }
+  background: #213b82;
+  flex-grow: 0; }
   .header__container {
     height: 100%;
     justify-content: space-between;

@@ -16,5 +16,13 @@ a {
 body {
   font-family: 'Roboto', sans-serif; }
 
+.App {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh; }
+
 .hide {
   display: none !important; }
+
+.main {
+  flex-grow: 1; }
