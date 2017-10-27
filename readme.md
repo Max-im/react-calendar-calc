@@ -3,9 +3,8 @@
 
 
 ## __App info:__
-|             |           |
+| Name        | Calendar-calc |
 | ----------------- | ----------------- |
-| Name	 			|	Calendar-calc	|
 | Description		|	Calculates the number of days between two selected dates		|
 | Start date 		|	23.10.2017	|
 | Version			|	1.0.0 			|
@@ -16,9 +15,9 @@
 
 ## __SetUp the app__
  - Download this repo:
- 	`git clone <App path>`
+ 	`git clone https://github.com/Max-im/react-calendar-calc.git`
  - Go to the project directory:
- 	`cd <App name>`
+ 	`cd react-calendar-calc`
  - Install all App dependencies:
  	`npm i`
  
@@ -28,7 +27,7 @@
 
 ## __Run the App__
  - for start the project in develop mode: 	
- 	`npm start` / `npm run dev`
+ 	`npm start`
  - for testing the project: 				
  	`npm test`
  - for build production version: 			
@@ -42,37 +41,37 @@
  - react-cli ;
  - React ![react][reactImg] / ES6 ![ES6][ES6Img];
  - Router;
- - HTML5 ![HTML][HTML5Img] / BEM / 
- - Sass (Scss) ![sass][sassImg] / CSS3 ![CSS3][CSS3Img];
+ - HTML5 / BEM  
+ - Sass (Scss) ![sass][sassImg] / CSS3;
 
 
 
 ## __Schedule:__
-| __Num__	| __Action__									| __Hours__	|
-| --------:	| --------------------------------------------- | --------: |
-| 1.		| Consider the project 							| 1 		|
-| 1.		| Environment init, structure the project		| 2 		|
-| 1.		| Prepare assets for the projects				| 3 		|
-| 1.		| Routing implementation						| 1 		|
-| 1. 		| Create Header component 						| 3 		|
-| 1.  		| Create NotFound (404) component				| 1 		|
-| 1.    | Create About component      | 5     |
-| 1.    | Create Calc component      | 5     |
-| 1.		| Create Contacts component			| 5 		|
-| 1.		| Create Footer component						| 2 		|
-| 1.		| Refactoring, add microdata, correct readme	| 3 		|
-|    		| TOTAL											| 100500 	|
+| __Num__	| __Action__						                			| __Hours__	|
+| -----:	| ------------------------------------------- | --------: |
+| 1		    | Consider the project 						          	| 1 		|
+| 1	    	| Environment init, structure the project		  | 2 		|
+| 1		    | Prepare assets for the projects				      | 1 		|
+| 1		    | Routing implementation					          	| 1 		|
+| 1     	| Create Header component 				         		| 3 		|
+| 1     	| Create NotFound (404) component			       	| 1 		|
+| 1       | Create About component                      | 4     |
+| 1       | Create Calc component                       | 5     |
+| 1   		| Create Contacts component			              | 5 		|
+| 1	    	| Create Footer component					           	| 1		  |
+| 1		    | Refactoring, add microdata, correct readme	| 4 		|
+|    	  	| TOTAL						                  					| __28__|
 
 
 
 
 ## __About Author__
-author:	Maxim Pozhidaev __<pogidaevmo@gmail.com>__
-[AuthorPage]
-[Portfolio]
-phone:	__+38 (050) 77-23-169__
-skype:	__Pogidaev_mo__
-[![facebook][fbImg]][myFb] [![linkedIn][inImg]][myIn] [![vk][vkImg]][myVk]
+ - author:	Maxim Pozhidaev <pogidaevmo@gmail.com>
+ - [AuthorPage]
+ - [Portfolio]
+ - phone:	__+38 (050) 77-23-169__
+ - skype:	__Pogidaev_mo__
+ - social: [![facebook][fbImg]][myFb] [![linkedIn][inImg]][myIn] [![vk][vkImg]][myVk]
 
 
 
@@ -88,9 +87,9 @@ skype:	__Pogidaev_mo__
 
 
 
-[fbImg]: https://exapmle 
-[inImg]: https://exapmle 
-[vkImg]: https://example
+[fbImg]: https://max-im.github.io/pages/resursable/src/assets/icons/facebook.svg 
+[inImg]: https://max-im.github.io/pages/resursable/src/assets/icons/linkedin.svg 
+[vkImg]: https://max-im.github.io/pages/resursable/src/assets/icons/vk.svg
 
 
 
@@ -100,26 +99,26 @@ skype:	__Pogidaev_mo__
 
 
 
-[webpackImg]: https://example
-[gulpImg]: https://example
-[angularImg]: https://example
-[reactImg]: https://example
-[reduxImg]: https://example
-[vueImg]: https://example
-[ES6Img]: https://example
-[jQueryImg]: https://example
-[lodashImg]: https://example
+[webpackImg]: https://max-im.github.io/pages/resursable/src/assets/icons/webpack.svg
+[gulpImg]: https://max-im.github.io/pages/resursable/src/assets/icons/gulp.svg
+[angularImg]: https://max-im.github.io/pages/resursable/src/assets/icons/ang.svg
+[reactImg]: https://max-im.github.io/pages/resursable/src/assets/icons/react.svg
+[reduxImg]: https://max-im.github.io/pages/resursable/src/assets/icons/redux.svg
+[vueImg]: https://max-im.github.io/pages/resursable/src/assets/icons/vue.svg
+[ES6Img]: https://max-im.github.io/pages/resursable/src/assets/icons/es5.svg
+[jQueryImg]: https://max-im.github.io/pages/resursable/src/assets/icons/jQuery.svg
+[lodashImg]: https://max-im.github.io/pages/resursable/src/assets/icons/lodash.svg
 [rxImg]: https://example
-[axiosImg]: https://example
+[axiosImg]: https://max-im.github.io/pages/resursable/src/assets/icons/axios.svg
 [HTML5Img]: https://example
-[bootstrapImg]: https://example
+[bootstrapImg]: https://max-im.github.io/pages/resursable/src/assets/icons/bootstrap.svg
 [foundationImg]: https://example
-[materialiseImg]: https://example
-[sassImg]: https://example
-[stylusImg]: https://example
+[materialiseImg]: https://max-im.github.io/pages/resursable/src/assets/icons/materialize.svg
+[sassImg]: https://max-im.github.io/pages/resursable/src/assets/icons/sass.svg
+[stylusImg]: https://max-im.github.io/pages/resursable/src/assets/icons/stylus.svg
 [CSS3Img]: https://example
 [canvasImg]: https://example
-[nodeImg]: https://example
+[nodeImg]: https://max-im.github.io/pages/resursable/src/assets/icons/node.svg
 [PHPImg]: https://example
 [mongoDBImg]: https://example
 [SQLImg]: https://example
