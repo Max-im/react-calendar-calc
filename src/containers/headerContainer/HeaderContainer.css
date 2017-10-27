@@ -8,6 +8,8 @@
   .header__navItem:hover {
     opacity: .6;
     transition: all .3s; }
+  .header__navItem_active {
+    background: red; }
 
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */

@@ -32,6 +32,21 @@
   &__author{
     color: #fff;
   }
+   &__navList{
+    display: flex;
+  }
+  &__navItem{
+    padding: 10px 30px;
+    transition: all .3s;
+    color: #fff;
+    &:hover{
+      opacity: .6;
+      transition: all .3s;
+    }
+    &_active{
+      background: red;
+    }
+  }
 }
 
 

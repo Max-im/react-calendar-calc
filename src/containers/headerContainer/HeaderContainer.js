@@ -10,6 +10,7 @@ function HeaderContainer(props) {
         className="header__navLi">
         <Link 
           to={item.path} 
+          activeClassName="header__navItem_active"
           onClick={props.clickHand}
           className="header__navItem">
           {item.name}

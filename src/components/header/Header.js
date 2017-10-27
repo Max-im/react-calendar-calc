@@ -4,7 +4,7 @@ import './Header.css';
 import HeaderContainer from '../../containers/headerContainer/HeaderContainer';
 
 const menuNames = [
-  {name: 'How it works', path: '/'},
+  {name: 'How it works', path: '/about'},
   {name: 'Calendar', path: '/calc'},
   {name: 'Contact us', path: '/contacts'}
 ];
@@ -56,10 +56,41 @@ class Header extends Component {
 
 
             <div className={this.state.ind ? 'hide' : ''}>
-              <HeaderContainer 
-                data={menuNames} 
-                clickHand={this.toggleState.bind(this)}
-              />
+              
+              <ul className="header__navList">
+              <li 
+                className="header__navLi">
+                <Link 
+                  exact
+                  to='/' 
+                  activeClassName="header__navItem_active"
+                  onClick={this.toggleState}
+                  className="header__navItem">
+                  How it works
+                </Link>
+              </li>
+              <li 
+                className="header__navLi">
+                <Link 
+                  to='/calc' 
+                  activeClassName="header__navItem_active"
+                  onClick={this.toggleState}
+                  className="header__navItem">
+                  How it works
+                </Link>
+              </li>
+              <li 
+                className="header__navLi">
+                <Link 
+                  to='/contacts' 
+                  activeClassName="header__navItem_active"
+                  onClick={this.toggleState}
+                  className="header__navItem">
+                  How it works
+                </Link>
+              </li>
+              </ul>
+
             </div>
 
           </nav>

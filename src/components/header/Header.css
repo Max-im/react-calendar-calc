@@ -25,6 +25,17 @@
     font-weight: bold; }
   .header__author {
     color: #fff; }
+  .header__navList {
+    display: flex; }
+  .header__navItem {
+    padding: 10px 30px;
+    transition: all .3s;
+    color: #fff; }
+    .header__navItem:hover {
+      opacity: .6;
+      transition: all .3s; }
+    .header__navItem_active {
+      background: red; }
 
 /*sendwich*/
 .sandwich {
