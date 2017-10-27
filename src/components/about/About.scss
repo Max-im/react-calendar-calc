@@ -6,4 +6,27 @@
     padding: 0 90px;
     box-sizing: border-box;
   }
+  &__block{
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px 0;
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    &:hover{
+      box-shadow: 1px 3px 7px rgba(0,0,0,.2); 
+    }
+  }
+  &__title{
+    font-weight: 100;
+    font-size: 25px;
+  }
+  &__img{
+    width: 40px;
+    padding: 20px 30px 0 10px;
+  }
 }

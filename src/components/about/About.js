@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import './About.css';
 import AboutElem from '../aboutElem/AboutElem';
+import setup from '../../assets/setup.svg';
+import run from '../../assets/run.svg';
+import tech from '../../assets/tech.svg';
 
 const data = [
   { 
     title: 'SetUp the App',
-    img: 'logo',
+    img: setup,
     list: [
       { name: 'git clone the repo' },
       { name: 'cd repo dir' },
@@ -14,6 +17,7 @@ const data = [
   },
   { 
     title: 'Run the App',
+    img: run,
     list: [
       { name: 'npm start - for start App in develop mode' },
       { name: 'npm test - for test the App' },
@@ -22,6 +26,7 @@ const data = [
   },
   { 
     title: 'App technologies',
+    img: tech,
     list: [
       { name: 'React-cli (create-react-app)' },
       { name: 'React / ES6' },
@@ -49,14 +54,16 @@ class About extends Component {
         key={item.title} 
         onClick={this.toggleState}
         className="about__block">
+          <img alt={item.title} src= {data[index].img} className="about__img" />
 
-        <h3 className="about__title">{item.title}</h3>
-
-        <AboutElem data={data[index].list} />
+          <div>
+            <h3 className="about__title">{item.title}</h3>
+            <AboutElem data={data[index].list}  />
+          </div>
 
       </div>
     )
-    
+
     return (
       <div className="about">
         <div className="container about__container">

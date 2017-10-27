@@ -1,21 +1,6 @@
 .about{
-  &__block{
-    width: 100%;
-    background: #fff;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 20px 0;
-    box-sizing: border-box;
-    cursor: pointer;
-    position: relative;
-    &:hover{
-      box-shadow: 1px 3px 7px rgba(0,0,0,.2); 
-    }
-  }
-  &__title{
-    font-weight: 100;
-    font-size: 25px;
-  }
+  
+  
   &__blockItem{
     padding: 7px 0;
   }
@@ -28,9 +13,11 @@
   }
   &__btn{
     position: absolute;
-    top: 30px;
-    right: 20px;
+    top: 40px;
+    right: 30px;
+    width: 16px;
   }
+
 }
 
 
