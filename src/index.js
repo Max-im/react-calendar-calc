@@ -15,11 +15,12 @@ import NotFound from './containers/notFound/NotFound';
 ReactDOM.render(
   
   <Router history={ hashHistory }> 
-    <Route path="/" exact component={ App }>
+    <Route component={ App }>
       <IndexRoute component={ About } />
-      <Route  path="/calc" component={ Calc } />
-      <Route  path="/contacts" component={ Contacts } />
-      <Route  path="/*" component={ NotFound } />
+      <Route path="/about" component={ About } />
+      <Route path="/calc" component={ Calc } />
+      <Route path="/contacts" component={ Contacts } />
+      <Route path="/*" component={ NotFound } />
     </Route>
   </Router>, 
 

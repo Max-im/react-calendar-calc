@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './About.css';
-import AboutBlock from '../../containers/aboutBlock/AboutBlock';
-
+import AboutElem from '../aboutElem/AboutElem';
 
 const data = [
   { 
@@ -44,13 +43,20 @@ class About extends Component {
     }
   }
 
-  visibleToggle(){
-    this.setState({
-      isVisible: !this.state.isVisible
-    })
-  }
-
   render() {
+    const listItem = data.map( (item, index) => 
+      <div 
+        key={item.title} 
+        onClick={this.toggleState}
+        className="about__block">
+
+        <h3 className="about__title">{item.title}</h3>
+
+        <AboutElem data={data[index].list} />
+
+      </div>
+    )
+    
     return (
       <div className="about">
         <div className="container about__container">
@@ -58,11 +64,7 @@ class About extends Component {
           <h2 className="about__header App__header">About this App</h2>
 
           <div className="about__contentWrap">
-            <AboutBlock 
-              data={data} 
-              click={this.visibleToggle.bind(this)}
-              visible={this.state.isVisible} 
-            />
+            {listItem}
           </div>
 
         </div>

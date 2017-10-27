@@ -9,7 +9,8 @@
     opacity: .6;
     transition: all .3s; }
   .header__navItem_active {
-    background: red; }
+    background: #4363ba;
+    border-radius: 3px; }
 
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */

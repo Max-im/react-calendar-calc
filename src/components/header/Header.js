@@ -56,41 +56,10 @@ class Header extends Component {
 
 
             <div className={this.state.ind ? 'hide' : ''}>
-              
-              <ul className="header__navList">
-              <li 
-                className="header__navLi">
-                <Link 
-                  exact
-                  to='/' 
-                  activeClassName="header__navItem_active"
-                  onClick={this.toggleState}
-                  className="header__navItem">
-                  How it works
-                </Link>
-              </li>
-              <li 
-                className="header__navLi">
-                <Link 
-                  to='/calc' 
-                  activeClassName="header__navItem_active"
-                  onClick={this.toggleState}
-                  className="header__navItem">
-                  How it works
-                </Link>
-              </li>
-              <li 
-                className="header__navLi">
-                <Link 
-                  to='/contacts' 
-                  activeClassName="header__navItem_active"
-                  onClick={this.toggleState}
-                  className="header__navItem">
-                  How it works
-                </Link>
-              </li>
-              </ul>
-
+              <HeaderContainer 
+                data={menuNames} 
+                clickHand={this.toggleState.bind(this)}
+              />
             </div>
 
           </nav>
