@@ -1,6 +1,4 @@
 .about{
-  
-  
   &__blockItem{
     padding: 7px 0;
   }
@@ -17,7 +15,6 @@
     right: 30px;
     width: 16px;
   }
-
 }
 
 
@@ -48,12 +45,25 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
 
+  .about{
+    &__btn{
+      top: 30px;
+      right: 20px;
+    }
+
+  }
+
 }
+
+
+
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
- 
+ b{
+  font-size: 12px;
+ }
 
 }
 

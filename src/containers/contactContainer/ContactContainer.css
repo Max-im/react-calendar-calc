@@ -1,0 +1,40 @@
+.contactContainer__element {
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  padding: 15px 20px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box; }
+  .contactContainer__element:hover {
+    box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.2); }
+
+.contactContainer__title {
+  font-size: 18px; }
+
+.contactContainer__img {
+  width: 40px; }
+
+.contactContainer__btn {
+  padding: 7px 25px;
+  background: #1367d7;
+  color: #fff;
+  border-radius: 5px;
+  letter-spacing: -.5px;
+  transition: all .3s; }
+  .contactContainer__btn:hover {
+    transition: all .3s; }
+
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */
+/*==========  Mobile First Method  ==========*/
+/* Custom, iPhone Retina */
+/* Extra Small Devices, Phones */
+/* Small Devices, Tablets */
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */

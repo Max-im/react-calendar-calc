@@ -41,7 +41,7 @@
  - react-cli ;
  - React ![react][reactImg] / ES6 ![ES6][ES6Img];
  - Router;
- - HTML5 / BEM  
+ - HTML5 / BEM;  
  - Sass (Scss) ![sass][sassImg] / CSS3;
 
 
@@ -50,16 +50,16 @@
 | __Num__	| __Action__						                			| __Hours__	|
 | -----:	| ------------------------------------------- | --------: |
 | 1		    | Consider the project 						          	| 1 		|
-| 1	    	| Environment init, structure the project		  | 2 		|
-| 1		    | Prepare assets for the projects				      | 1 		|
-| 1		    | Routing implementation					          	| 1 		|
-| 1     	| Create Header component 				         		| 3 		|
-| 1     	| Create NotFound (404) component			       	| 1 		|
-| 1       | Create About component                      | 4     |
-| 1       | Create Calc component                       | 5     |
-| 1   		| Create Contacts component			              | 5 		|
-| 1	    	| Create Footer component					           	| 1		  |
-| 1		    | Refactoring, add microdata, correct readme	| 4 		|
+| 2	    	| Environment init, structure the project		  | 2 		|
+| 3		    | Prepare assets for the projects				      | 1 		|
+| 4		    | Routing implementation					          	| 1 		|
+| 5     	| Create Header component 				         		| 3 		|
+| 6     	| Create NotFound (404) component			       	| 1 		|
+| 7       | Create About component                      | 4     |
+| 8       | Create Calc component                       | 5     |
+| 9   		| Create Contacts component			              | 5 		|
+| 10    	| Create Footer component					           	| 1		  |
+| 11	    | Refactoring, add microdata, correct readme	| 4 		|
 |    	  	| TOTAL						                  					| __28__|
 
 
@@ -68,7 +68,6 @@
 ## __About Author__
  - author:	Maxim Pozhidaev <pogidaevmo@gmail.com>
  - [AuthorPage]
- - [Portfolio]
  - phone:	__+38 (050) 77-23-169__
  - skype:	__Pogidaev_mo__
  - social: [![facebook][fbImg]][myFb] [![linkedIn][inImg]][myIn] [![vk][vkImg]][myVk]

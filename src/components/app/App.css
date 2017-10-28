@@ -29,9 +29,49 @@ body {
   .App__header {
     font-size: 40px;
     font-weight: 100; }
+  .App__block {
+    padding: 70px 90px;
+    box-sizing: border-box; }
+  .App__element {
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px 0;
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative; }
+    .App__element:hover {
+      box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.2); }
 
 .main {
   flex-grow: 1; }
 
 .hide {
   display: none !important; }
+
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .App__header {
+    font-size: 35px; }
+  .App__block {
+    padding: 40px 50px; } }
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .App__header {
+    font-size: 30px; }
+  .App__block {
+    padding: 30px 10px; } }
+
+/* Custom, iPhone Retina */
+/*==========  Mobile First Method  ==========*/
+/* Custom, iPhone Retina */
+/* Extra Small Devices, Phones */
+/* Small Devices, Tablets */
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */

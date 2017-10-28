@@ -25,7 +25,7 @@ const data = [
     ]
   },
   { 
-    title: 'App technologies',
+    title: 'App tech',
     img: tech,
     list: [
       { name: 'React-cli (create-react-app)' },
@@ -66,7 +66,7 @@ class About extends Component {
 
     return (
       <div className="about">
-        <div className="container about__container">
+        <div className="container App__block">
         
           <h2 className="about__header App__header">About this App</h2>
 
