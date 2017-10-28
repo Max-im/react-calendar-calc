@@ -14,6 +14,9 @@ function resizeControll(e){
   if( window.innerWidth > 768 ){
     this.setState({ ind : false })    
   }
+  else{
+    this.setState({ ind : true })    
+  }
 }
 
 

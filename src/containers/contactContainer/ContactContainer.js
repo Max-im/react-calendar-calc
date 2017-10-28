@@ -4,7 +4,7 @@ import './ContactContainer.css';
 function ContactContainer(props) {
   const listItems = props.data.map( ( item, index ) =>
     <div key={item.name} className="contactContainer__element">
-      <div>
+      <div className="contactContainer__content">
         <img 
           alt={ item.name } 
           src={ item.img } 
@@ -14,8 +14,8 @@ function ContactContainer(props) {
       <a 
         href={ item.link } 
         className="contactContainer__btn"
-        target="_blank">
-        {'Visit page > '}
+        target={item.target}>
+        {item.btn}
       </a>
     </div>
   )

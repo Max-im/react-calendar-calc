@@ -11,11 +11,16 @@
   .contactContainer__element:hover {
     box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.2); }
 
+.contactContainer__content {
+  display: flex;
+  align-items: center; }
+
 .contactContainer__title {
   font-size: 18px; }
 
 .contactContainer__img {
-  width: 40px; }
+  width: 40px;
+  padding: 0 20px 0 0; }
 
 .contactContainer__btn {
   padding: 7px 25px;
@@ -25,12 +30,25 @@
   letter-spacing: -.5px;
   transition: all .3s; }
   .contactContainer__btn:hover {
-    transition: all .3s; }
+    transition: all .3s;
+    background: #0f51a8;
+    color: #e6e6e6; }
 
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */
 /* Small Devices, Tablets */
 /* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .contactContainer__element {
+    padding: 15px 10px;
+    margin: 20px 0; }
+  .contactContainer__title {
+    font-size: 16px; }
+  .contactContainer__img {
+    padding: 0 10px 0 0; }
+  .contactContainer__btn {
+    padding: 7px 15px; } }
+
 /* Custom, iPhone Retina */
 /*==========  Mobile First Method  ==========*/
 /* Custom, iPhone Retina */
