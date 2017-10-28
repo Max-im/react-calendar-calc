@@ -87,8 +87,8 @@
 
 
 [fbImg]: http://thumbpress.com/wp-content/themes/thumbpress-v2/images/fb-icon.png
-[inImg]: https://www.google.com.ua/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwi57ZWz1pPXAhXCVhQKHdE0ABUQjRwIBw&url=https%3A%2F%2Fwww.linkedin.com%2Fjobs%2Fview-all&psig=AOvVaw0mPr1Xdpe3vMSgX8YxzJwl&ust=1509292377664591
-[vkImg]: https://www.google.com.ua/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwio9YGn1pPXAhULchQKHfHAAksQjRwIBw&url=https%3A%2F%2Ftopliders.com%2F&psig=AOvVaw36R9xnE38migrkLK3BQpAg&ust=1509292351327778
+[inImg]: https://www.coe.int/t/dghl/cooperation/cepej/System/icons-sm/linkedin.png
+[vkImg]: http://rosa-tv.com/wp-content/themes/newgen/images/linkedin_hover.png
 
 
 
