@@ -2,57 +2,63 @@ import React, { Component } from 'react';
 import './Calendar.css';
 import CalcContainer from '../../containers/calcContainer/CalcContainer';
 
-let daysArr = [];
-let day;
-let maxDate;
 
-function addEmptyDays(day){
-  daysArr = [];
-  for( let i = 1 ; i < day ; i++ ){
-    daysArr.push('')
-  }
-}
-
-function forLoop(maxDate){
-    for( let i = 1 ; i <= maxDate ; i++ ){
-      daysArr.push(i)
-    }
-}
 
 class Calendar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      Month: new Date().getMonth(),
-      Year: new Date().getFullYear(),
+      date: new Date(),
+      daysArr: ''
     }
   }
   
   componentWillMount() {
-    this.getDate();
+    this.getDate()
   }
   
+
   getDate(){
-   const date = new Date(this.state.Year, this.state.Month);
-    date.setDate(0);
-    maxDate = date.getDate();
-    day = new Date(this.state.Year, this.state.Month, 1).getDay(); 
-    addEmptyDays(day);
-    forLoop(maxDate); 
+    let date = this.state.date;
+    const dateInfo = {
+      year: date.getFullYear(),
+      month: date.getMonth(),
+    };
+    const lastDay = new Date(dateInfo.year, dateInfo.month + 1, 0 ).getDate();
+    const day = new Date(dateInfo.year, dateInfo.month, 1).getDay();
+    const dateArr = [];
+    const count = Math.ceil((lastDay + day) / 7) * 7;
+
+    for( let i = 0 ; i < count ; i++ ){
+      const newDate = new Date(dateInfo.year, dateInfo.month, 1 - day + i ).getDate(); 
+      if( new Date(dateInfo.year, dateInfo.month, 1 - day + i ).getMonth() === dateInfo.month ){
+        dateArr.push({
+          date: newDate,
+          cur: true
+        });
+      }else{
+        dateArr.push({
+          date: newDate,
+          cur: false
+        });
+      }
+    }
+
+    this.setState({ daysArr: dateArr})
+
   }
+    
 
   changeDate(e){
     if(e.target.classList.contains('inc')){
       this.setState({
-        Month: ++this.state.Month
+        date: new Date(this.state.date.getFullYear(), this.state.date.getMonth()+1)
       })
-      this.getDate();
     }
     else{
-      this.setState({
-        Month: --this.state.Month
-      })
-      this.getDate();
+     this.setState({
+        date: new Date(this.state.date.getFullYear(), this.state.date.getMonth()-1)
+      }) 
     }
   }
 
@@ -69,9 +75,8 @@ class Calendar extends Component {
               <CalcContainer 
                 get={this.props.get}
                 addMonth={this.changeDate.bind(this)}
-                data={daysArr}
-                year={this.state.Year} 
-                month={this.state.Month} />
+                data={this.state.daysArr}
+                date={this.state.date} />
           </div>
 
         

@@ -13,7 +13,7 @@
   &__calendarControl{
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     margin: 0 0 10px 0;
   }
   &__calendarHeader{
@@ -48,9 +48,25 @@
     }
   }
   &__calendarEmpty{
+    color: #ccc;
   }
+  
 
+}
 
+.inc{
+  width: 15px;
+  padding: 5px;
+  border-radius: 50%;
+  transform: rotate(-90deg);
+  &:hover{
+    color: #fff;
+    background: rgb(19,103,215);
+  }
+}
+.dec{
+  @extend .inc;
+  transform: rotate(90deg);
 }
 
  /* Large Devices, Wide Screens */

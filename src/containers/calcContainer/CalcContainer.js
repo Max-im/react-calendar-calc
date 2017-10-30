@@ -2,36 +2,35 @@ import React from 'react';
 import './CalcContainer.css';
 import moment from 'moment';
 
+import chevron from '../../assets/down.svg';
 
 function CalcContainer(props) {
-
-  const formatedMonth = moment(new Date(props.year, props.month))
-    .format("MMMM")
-    .toString();
-  const formatedYear = moment(new Date(props.year, props.month))
-    .format("YYYY")
-    .toString();
   const listItems = props.data.map( ( item, index ) =>
     <li 
       key={index} 
       onClick={item.length !== 0 ? props.get : function(){return null}}
-      className={item.length === 0 ? "calc__calendarEmpty" : "calc__calendarDate"}>
-      {item}
+      className={ item.cur ? "calc__calendarDate" : "calc__calendarEmpty" }>
+      {item.date}
     </li>
   )
   return (
     <div className="calc__calendarWrap">
       <div className="calc__calendarControl">
-        <a className="calc__calendarBtn dec"
-        onClick={props.addMonth}>
-        X
-      </a>
-        <h3 className="calc__calendarHeader">{formatedMonth} {formatedYear}</h3>
-        <a 
+        <img 
+          className="calc__calendarBtn dec" 
+          onClick={props.addMonth}
+          src={chevron}
+          alt="chevron"
+        />
+        <h3 className="calc__calendarHeader">
+          { props.date.getFullYear() } { moment(props.date).format('MMMM') }
+        </h3>
+        <img 
           className="calc__calendarBtn inc" 
-          onClick={props.addMonth}>
-          X 
-        </a>
+          onClick={props.addMonth.bind(this)}
+          src={chevron}
+          alt="chevron"
+        />
       </div>
       <ul className="calc__calendarDayListTmpl">
         <li className="calc__calendarDayTmpl">s</li>
