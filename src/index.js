@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, Router, IndexRoute, hashHistory } from 'react-router';
+import { Route, Router, IndexRedirect, hashHistory } from 'react-router';
 
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
@@ -15,8 +15,8 @@ import NotFound from './containers/notFound/NotFound';
 ReactDOM.render(
   
   <Router history={ hashHistory }> 
-    <Route component={ App }>
-      <IndexRoute component={ About } />
+    <Route path="/" component={ App }>
+      <IndexRedirect to='about' />
       <Route path="/about" component={ About } />
       <Route path="/calc" component={ Calc } />
       <Route path="/contacts" component={ Contacts } />

@@ -9,13 +9,13 @@ function ContactContainer(props) {
           alt={ item.name } 
           src={ item.img } 
           className="contactContainer__img" />
-        <span className="contactContainer__title">{ item.name }</span>
+        <span className="contactContainer__title">{ item.name }  </span>
       </div>
       <a 
         href={ item.link } 
         className="contactContainer__btn"
         target={item.target}>
-        {item.btn}
+        { item.btn } 
       </a>
     </div>
   )

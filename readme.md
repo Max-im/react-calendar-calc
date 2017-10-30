@@ -87,7 +87,7 @@
 
 
 [fbImg]: http://thumbpress.com/wp-content/themes/thumbpress-v2/images/fb-icon.png
-[inImg]: https://www.coe.int/t/dghl/cooperation/cepej/System/icons-sm/linkedin.png
+[inImg]: https://cache.addthiscdn.com/icons/v2/thumbs/32x32/linkedin.png
 [vkImg]: http://rosa-tv.com/wp-content/themes/newgen/images/linkedin_hover.png
 
 

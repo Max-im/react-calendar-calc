@@ -15,8 +15,6 @@ class AboutElem extends Component {
   }
 
   render() {
-    console.log(this.props.img)
-
     const itemLists = this.props.data.map( ( item, index ) =>
       <li
         key={item.name} 
