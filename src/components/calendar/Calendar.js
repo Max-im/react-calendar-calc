@@ -8,7 +8,7 @@ class Calendar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      date: new Date(),
+      month: new Date().getMonth(),
       daysArr: ''
     }
   }
@@ -19,7 +19,7 @@ class Calendar extends Component {
   
 
   getDate(){
-    let date = this.state.date;
+    let date = new Date(new Date().getFullYear(), this.state.month);
     const dateInfo = {
       year: date.getFullYear(),
       month: date.getMonth(),
@@ -52,15 +52,18 @@ class Calendar extends Component {
   changeDate(e){
     if(e.target.classList.contains('inc')){
       this.setState({
-        date: new Date(this.state.date.getFullYear(), this.state.date.getMonth()+1)
-      })
+        month: ++this.state.month,
+      });
+
     }
     else{
-     this.setState({
-        date: new Date(this.state.date.getFullYear(), this.state.date.getMonth()-1)
-      }) 
+      this.setState({
+        month: --this.state.month,
+      });
     }
+    this.getDate();
   }
+  
 
   render() {
     return (
@@ -76,7 +79,7 @@ class Calendar extends Component {
                 get={this.props.get}
                 addMonth={this.changeDate.bind(this)}
                 data={this.state.daysArr}
-                date={this.state.date} />
+                month={this.state.month} />
           </div>
 
         

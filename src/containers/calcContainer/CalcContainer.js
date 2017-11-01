@@ -5,10 +5,11 @@ import moment from 'moment';
 import chevron from '../../assets/down.svg';
 
 function CalcContainer(props) {
+  const formatedDate = moment(new Date( new Date().getFullYear(), props.month)).format('MMMM YYYY');
   const listItems = props.data.map( ( item, index ) =>
     <li 
       key={index} 
-      onClick={item.length !== 0 ? props.get : function(){return null}}
+      onClick={item.length !== 0 ? props.get.bind(this, new Date(new Date().getFullYear(), props.month, item.date)) : function(){return null}}
       className={ item.cur ? "calc__calendarDate" : "calc__calendarEmpty" }>
       {item.date}
     </li>
@@ -23,11 +24,11 @@ function CalcContainer(props) {
           alt="chevron"
         />
         <h3 className="calc__calendarHeader">
-          { props.date.getFullYear() } { moment(props.date).format('MMMM') }
+          { formatedDate }
         </h3>
         <img 
           className="calc__calendarBtn inc" 
-          onClick={props.addMonth.bind(this)}
+          onClick={props.addMonth}
           src={chevron}
           alt="chevron"
         />

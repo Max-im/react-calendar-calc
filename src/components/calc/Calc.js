@@ -11,33 +11,37 @@ class Calc extends Component {
     super(props);
     this.state = {
       firstDate: '',
-      lastDate: ''
+      lastDate: '',
+      rawFirst : '',
+      rawLast : '',
+      result: ''
     }
   }
 
   componentDidMount() {
     this.setState({ 
-      firstDate: moment(new Date() ).format('l').toString(), 
-      lastDate: moment(new Date() ).format('l').toString() 
+      firstDate: moment(new Date() ).format('DD/MM/YY'), 
+      lastDate: moment(new Date() ).format('DD/MM/YY') ,
+      rawFirst: new Date(),
+      rawLast: new Date()
     })
   }
 
-  getInfo(e){
-    const date = e.target.innerHTML;
-    const mmmmYyyy = e.target.closest('.calc__calendarWrap').querySelector('.calc__calendarHeader').innerHTML
-    const arr = mmmmYyyy.split(' ');
-    const firstDate = new Date(arr[1], moment(arr[0], 'MMMM').format('MM'), date);
-    const formateDate = moment(firstDate).format('l')
-    this.setState({ firstDate: formateDate })
+  
+  getFirst(e){
+    this.setState({
+      firstDate: moment(e).format('DD/MM/YY'),
+      rawFist: e
+    });
   }
-
-  getTwo(e){
-    const date = e.target.innerHTML;
-    const mmmmYyyy = e.target.closest('.calc__calendarWrap').querySelector('.calc__calendarHeader').innerHTML
-    const arr = mmmmYyyy.split(' ');
-    const firstDate = new Date(arr[1], moment(arr[0], 'MMMM').format('MM'), date);
-    const formateDate = moment(firstDate).format('l')
-    this.setState({ lastDate: formateDate }) 
+  getSecond(e){
+    this.setState({
+      lastDate: moment(e).format('DD/MM/YY'),
+      rawLast: e
+    });
+    setTimeout(() => {
+      console.log( this.state.rawLast - this.state.rawFirst )
+    }, 0)
   }
 
   render() {
@@ -70,8 +74,8 @@ class Calc extends Component {
             
             </div>
             
-            <Calendar get={this.getInfo.bind(this)}/>
-            <Calendar get={this.getTwo.bind(this)}/>
+            <Calendar get={this.getFirst.bind(this)}/>
+            <Calendar get={this.getSecond.bind(this)}/>
            
 
           </div>
