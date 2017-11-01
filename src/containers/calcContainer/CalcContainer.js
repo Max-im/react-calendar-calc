@@ -9,7 +9,7 @@ function CalcContainer(props) {
   const listItems = props.data.map( ( item, index ) =>
     <li 
       key={index} 
-      onClick={item.length !== 0 ? props.get.bind(this, new Date(new Date().getFullYear(), props.month, item.date)) : function(){return null}}
+      onClick={item.cur ? props.get.bind(this, new Date(new Date().getFullYear(), props.month, item.date)) : function(){return null}}
       className={ item.cur ? "calc__calendarDate" : "calc__calendarEmpty" }>
       {item.date}
     </li>

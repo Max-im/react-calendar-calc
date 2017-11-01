@@ -12,37 +12,38 @@ class Calc extends Component {
     this.state = {
       firstDate: '',
       lastDate: '',
-      rawFirst : '',
-      rawLast : '',
-      result: ''
+      rawFirst : new Date(),
+      rawLast : new Date(),
+      result: 0
     }
   }
 
   componentDidMount() {
     this.setState({ 
       firstDate: moment(new Date() ).format('DD/MM/YY'), 
-      lastDate: moment(new Date() ).format('DD/MM/YY') ,
-      rawFirst: new Date(),
-      rawLast: new Date()
+      lastDate: moment(new Date() ).format('DD/MM/YY') 
     })
   }
 
   
-  getFirst(e){
-    this.setState({
-      firstDate: moment(e).format('DD/MM/YY'),
-      rawFist: e
-    });
+  get(e, el){
+    if(el.target.closest('.calendarComp').classList.contains('first')){
+      this.setState({
+        firstDate: moment(e).format('DD/MM/YY'),
+        rawFirst: e,
+        result: Math.floor((this.state.rawLast.getTime() - e.getTime()) /1000/60/60/24)
+      });
+    }
+    else{
+     this.setState({
+        lastDate: moment(e).format('DD/MM/YY'),
+        rawLast: e,
+        result: Math.floor((e.getTime() - this.state.rawFirst.getTime()) /1000/60/60/24)
+      }); 
+    }
   }
-  getSecond(e){
-    this.setState({
-      lastDate: moment(e).format('DD/MM/YY'),
-      rawLast: e
-    });
-    setTimeout(() => {
-      console.log( this.state.rawLast - this.state.rawFirst )
-    }, 0)
-  }
+
+  
 
   render() {
     return (
@@ -69,14 +70,16 @@ class Calc extends Component {
                
               <div className="calc__pickerOutput">
                 <h3 className="calc__pickerHeader">days</h3>
-
+                  <span className="calc__pickerOutDate">{ this.state.result }</span>
               </div >
             
             </div>
-            
-            <Calendar get={this.getFirst.bind(this)}/>
-            <Calendar get={this.getSecond.bind(this)}/>
-           
+            <div className="calendarComp first">
+              <Calendar  get={this.get.bind(this)} />
+            </div>
+            <div className="calendarComp second">
+              <Calendar get={this.get.bind(this)} />
+            </div>
 
           </div>
         
