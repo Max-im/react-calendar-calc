@@ -16,6 +16,8 @@ class Calendar extends Component {
   componentWillMount() {
     this.getDate()
   }
+
+  
   
 
   getDate(){
@@ -39,7 +41,7 @@ class Calendar extends Component {
       }else{
         dateArr.push({
           date: newDate,
-          cur: false
+          cur: false,
         });
       }
     }
@@ -47,6 +49,9 @@ class Calendar extends Component {
     this.setState({ daysArr: dateArr})
 
   }
+
+  
+
     
 
   changeDate(e){

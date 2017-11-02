@@ -10,23 +10,17 @@ class Calc extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstDate: '',
-      lastDate: '',
-      rawFirst : new Date(),
-      rawLast : new Date(),
+      firstDate: moment(new Date() ).format('DD/MM/YY'),
+      lastDate: moment(new Date() ).format('DD/MM/YY'),
+      rawFirst : new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()),
+      rawLast : new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()),
       result: 0
     }
   }
 
-  componentDidMount() {
-    this.setState({ 
-      firstDate: moment(new Date() ).format('DD/MM/YY'), 
-      lastDate: moment(new Date() ).format('DD/MM/YY') 
-    })
-  }
-
-  
+   
   get(e, el){
+
     if(el.target.closest('.calendarComp').classList.contains('first')){
       this.setState({
         firstDate: moment(e).format('DD/MM/YY'),
@@ -70,15 +64,22 @@ class Calc extends Component {
                
               <div className="calc__pickerOutput">
                 <h3 className="calc__pickerHeader">days</h3>
-                  <span className="calc__pickerOutDate">{ this.state.result }</span>
+                  <span
+                    className="calc__pickerOutDate">
+                    { this.state.result }
+                  </span>
               </div >
             
             </div>
             <div className="calendarComp first">
-              <Calendar  get={this.get.bind(this)} />
+              <Calendar 
+                get={this.get.bind(this)} 
+                first = {true} />
             </div>
             <div className="calendarComp second">
-              <Calendar get={this.get.bind(this)} />
+              <Calendar 
+                get={this.get.bind(this)}
+                last = {true} />
             </div>
 
           </div>

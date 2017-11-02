@@ -50,7 +50,21 @@
   &__calendarEmpty{
     color: #ccc;
   }
-  
+  &__point{
+    color: #fff;
+    position: relative;
+    background: rgb(19,103,215);
+    &:after{
+      content: '.';
+      position: absolute;
+      bottom: 2px;
+      left: calc(50% - 2px);
+      font-size: 20px;
+    }
+  }
+  &__mark{
+    background: rgb(234,241,251);
+  }
 
 }
 

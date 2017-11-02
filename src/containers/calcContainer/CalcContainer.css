@@ -48,6 +48,20 @@
 .calc__calendarEmpty {
   color: #ccc; }
 
+.calc__point {
+  color: #fff;
+  position: relative;
+  background: #1367d7; }
+  .calc__point:after {
+    content: '.';
+    position: absolute;
+    bottom: 2px;
+    left: calc(50% - 2px);
+    font-size: 20px; }
+
+.calc__mark {
+  background: #eaf1fb; }
+
 .inc, .dec {
   width: 15px;
   padding: 5px;
