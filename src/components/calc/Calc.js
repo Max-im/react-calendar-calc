@@ -26,70 +26,40 @@ class Calc extends Component {
   }
 
   calendarToggle = (e) => {
-    if(e === 0) {
-      this.setState({
-        first: {
-          id: 0,
-          show: !this.state.first.show,
-          date: new Date(),
-          month: new Date().getMonth()
-        }
-      })
-    }
-    else{
-     this.setState({
-        second: {
-          id: 1,
-          show: !this.state.second.show,
-          date: new Date(),
-          month: new Date().getMonth()
-        }
-      }) 
-    }
+    const item = e.id === 0 ? 'first' : 'second';
+    this.setState({
+      [item]: {
+        id: e.id,
+        date: e.date,
+        show: !e.show,
+        month: e.month
+      }
+    });
   }
 
+
   incrMonth = (e) => {
-   if(e.id === 1){
+    const item = e.id === 0 ? 'first' : 'second';
     this.setState({
-      second: {
-        id: 1,
-        date: new Date(),
-        month: ++this.state.second.month
+      [item]: {
+        id: e.id,
+        date: e.date,
+        show: e.show,
+        month: ++e.month
       }
-    })
-    console.log(this.state.second.month)
-   }
-   else{
-    this.setState({
-      first: {
-        id: 0,
-        date: new Date(),
-        month: ++this.state.first.month
-      }
-    })
-   }
+    });
   }
 
   decrMonth = (e) => {
-   if(e.id === 1){
+   const item = e.id === 0 ? 'first' : 'second';
     this.setState({
-      second: {
-        id: 1,
-        date: new Date(),
-        month: --this.state.second.month
+      [item]: {
+        id: e.id,
+        date: e.date,
+        show: e.show,
+        month: --e.month
       }
-    })
-    console.log(this.state.second.month)
-   }
-   else{
-    this.setState({
-      first: {
-        id: 0,
-        date: new Date(),
-        month: --this.state.first.month
-      }
-    })
-   }
+    });
   }
 
 

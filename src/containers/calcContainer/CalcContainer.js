@@ -19,29 +19,25 @@ function CalcContainer({incr, decr, data}) {
   });
 
   const monthDays = [];
-  const test = () => {
-    let firstDay = new Date(data.date.setDate(1));
-    let lastDay = +moment(data.date.setDate(0)).add(1, 'month').format('DD');
-    let day = firstDay.getDay();
-    const count = Math.ceil((day + lastDay) / 7 ) * 7;
-    
-    for( let i = 1 ; i <= count ; i++ ){
-      monthDays.push({
-        id: i,
-        clas: '',
-        date: data.date.setDate(i - day + 1),
-      })
-    }
+  (() => {
+    const lastDay = new Date(data.date.getFullYear(), data.month+1, 0).getDate();
+    const firstWeekDay = new Date(data.date.getFullYear(), data.month, 1).getDay();
+    const count = Math.ceil((lastDay + firstWeekDay) / 7) * 7;
 
-  }; 
+    for( let i = 0 ; i < count ; i++ ){
+      monthDays.push({
+        dayInfo: new Date(data.date.getFullYear(), data.month, 1 - firstWeekDay + i )
+      })
+    } 
+       
+  })() 
   
-  test()
 
   const daysList = monthDays.map( item => {
     return (
       <li
         key={item.id}>
-        {moment(item.date).format('D')}
+        {moment(item.dayInfo).format('D')}
       </li>
     )
   })
