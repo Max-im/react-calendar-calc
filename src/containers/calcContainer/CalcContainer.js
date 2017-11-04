@@ -1,50 +1,85 @@
 import React from 'react';
-import './CalcContainer.css';
 import moment from 'moment';
 
+import './CalcContainer.css';
 import chevron from '../../assets/down.svg';
 
-function CalcContainer(props) {
-  const formatedDate = moment(new Date( new Date().getFullYear(), props.month)).format('MMMM YYYY');
-  const listItems = props.data.map( ( item, index ) =>
-    <li 
-      key={index} 
-      onClick={item.cur ? props.get.bind(this, new Date(new Date().getFullYear(), props.month, item.date)) : function(){return null}}
-      className={ item.cur ? "calc__calendarDate" : "calc__calendarEmpty" }>
-      {item.date}
-    </li>
-  )
+
+const days = ['s', 'm', 't', 'w', 't', 'f', 's'];
+
+function CalcContainer({incr, decr, data}) {
+  const daysNameList = days.map( (item, i) => {
+    return ( 
+      <li 
+        key={i}
+        className="calc__calendarDayTmpl">
+        {item}
+      </li>
+    )
+  });
+
+  const monthDays = [];
+  const test = () => {
+    let firstDay = new Date(data.date.setDate(1));
+    let lastDay = +moment(data.date.setDate(0)).add(1, 'month').format('DD');
+    let day = firstDay.getDay();
+    const count = Math.ceil((day + lastDay) / 7 ) * 7;
+    
+    for( let i = 1 ; i <= count ; i++ ){
+      monthDays.push({
+        id: i,
+        clas: '',
+        date: data.date.setDate(i - day + 1),
+      })
+    }
+
+  }; 
+  
+  test()
+
+  const daysList = monthDays.map( item => {
+    return (
+      <li
+        key={item.id}>
+        {moment(item.date).format('D')}
+      </li>
+    )
+  })
+  
   return (
-    <div className="calc__calendarWrap">
+    <div 
+      
+      className="calc__calendarWrap">
+      
       <div className="calc__calendarControl">
         <img 
-          className="calc__calendarBtn dec" 
-          onClick={props.addMonth}
+          onClick={decr.bind(this, data)}
+          className={"calc__calendarBtn dec"} 
           src={chevron}
           alt="chevron"
         />
+        
         <h3 className="calc__calendarHeader">
-          { formatedDate }
+          {moment(new Date().setMonth(data.month)).format('YYYY MMMM') }
         </h3>
+
         <img 
+          onClick={incr.bind(this, data)}
           className="calc__calendarBtn inc" 
-          onClick={props.addMonth}
           src={chevron}
           alt="chevron"
         />
       </div>
+      
       <ul className="calc__calendarDayListTmpl">
-        <li className="calc__calendarDayTmpl">s</li>
-        <li className="calc__calendarDayTmpl">m</li>
-        <li className="calc__calendarDayTmpl">t</li>
-        <li className="calc__calendarDayTmpl">w</li>
-        <li className="calc__calendarDayTmpl">t</li>
-        <li className="calc__calendarDayTmpl">f</li>
-        <li className="calc__calendarDayTmpl">s</li>
+        { daysNameList }
       </ul>
+
+
       <ul className="calc__calendarList">
-        {listItems}
+        { daysList }
       </ul>
+    
     </div>
   );
 }

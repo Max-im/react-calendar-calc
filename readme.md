@@ -56,7 +56,7 @@
 | 5     	| Create Header component 				         		| 3 		|
 | 6     	| Create NotFound (404) component			       	| 1 		|
 | 7       | Create About component                      | 4     |
-| 8       | Create Calc component                       | 5     |
+| 8       | Create Calc component                       | 12    |
 | 9   		| Create Contacts component			              | 3 		|
 | 10    	| Create Footer component					           	| 1		  |
 | 11	    | Refactoring, add microdata, correct readme	| 4 		|
@@ -99,10 +99,12 @@
 
 [reactImg]: https://i2.wp.com/react.jsnews.io/wp-content/uploads/sites/3/2016/09/cropped-react.png?fit=32%2C32&ssl=1
 [ES6Img]: https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url=https://habrastorage.org/webt/59/cc/76/59cc7600c78a2239379574.jpeg&container=focus&refresh=2592000&resize_w=32
-[sassImg]: https://www.google.com.ua/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjrpOGe1ZPXAhXIshQKHe2mB3wQjRwIBw&url=https%3A%2F%2Ftoster.ru%2Fq%2F473569&psig=AOvVaw3SxuFg-PuNP7RYaNzLysHZ&ust=1509292065377679
-[cssImg]: http://www.css3recipes.com/favicon.png
-[HTMLImg]: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAulBMVEX////kTSYAAADxZSnrel3r6+vwYinyaCnkTifwWxv+8u7kPRLwVhT0hlfr+fzosKHkSiLMzMzS0tLsXCj6wanjRBr2w7b5187r8PHxn4rlVjHs///mcFHq39zukHfoopAvLy89PT2wsLDyp5Pzd0LpxLn86OPqy8P84tfnYT72yb370sHlZkbybTTti3L4s5T2oHvthWq/v7/j4+OAgICjo6NdXV0iIiKDg4PolH/3p4b2l27rfWHq1tBOVk07AAABlElEQVQ4jX2S6VbCMBBGJ1PShUIJlABiLdACgiIom/v7v5aTNJ4myPH+nNwzyXwTAE0Xe0c8IeJxijDDHnbBpYvnGR6OeN5P8RWvCgRwLGA6Q9Vhzy+Fw5sRzqeCBMS9I/CC904AxQH2XTicRkVRXLT4n2HjKsNaEOwKohaasi57viGUzfqOuBYCz8Bi6xGqQ1zRqvACJi1hTMJtojEVEsaWsKEGCdeYSstjG0v4IoEO74imZhn57MsScsbkN09iKWVU4fkst4SbkIkFT8bWFCm7sYSSYunw0TbLsrZmTkJpCQOKcsL5iKgKOy8VA3sZgoXv9hQfJAwtYUlJZR1Nv99fAXx6oVxagspaUIxMCHpkH6DtJq2FzW2yEGoK/xFgHlwIIWNhwu+lEqKVTjp0BJP1pCGj9u5v0gCNKmv+O2bLZw1H2NIjJ3eJGbO581O2dQTKmtYxzhcjeHx+ii6T1lkrQiGj31WUjjAQ1pcL/JSWN3CE5YswHzdIU3WbeHGCVKzKLBbqKSLOyj+nhod8vc4fnNIPtA0ev5KbUZMAAAAASUVORK5CYII=
+[sassImg]: https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url=https://habrastorage.org/files/1b0/47c/0d3/1b047c0d34f3441dbf4305b6ce007836.png&container=focus&refresh=2592000&resize_w=32
 
+
+
+[cssImg]: http://www.css3recipes.com/favicon.png
+[HTMLImg]: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAxlBMVEX////kTSbsTifuXijs8/TkSh7xYiDoTibpVifYpp/+8e/q3t3yYx7rWifkLQDpQwP1o5HyZyTKe3vxTQDyZinkHgD17uzt5OLaqJvosqvxTgDWiHTs7e3lZE3efGPnUibnppbkZETahW7glIDnopj4wLT2rJz39PPjyML4uKnvAADlUy7jAADfa03kdlrkNwDlWDzbt677187yvrXnloz0jW7vIgD14d7nvbjybjnyXgfzdkztgWr1l37oqqLmh3nXjY3ljoUt+utwAAABl0lEQVQ4jd2S63qiMBCGkyExrCnBFhBBxANV0qaCunR13e3B+7+pJcgjoXsHfX9m3uTJfDMIfR8+H6YnKeXpR0v2oPnshCXQUghRui0UNMtOWOEbttVi41UnLOoKow3WXYPv23jRCXt99yo4dwONFvadwBUWVcg14VCTj+K54p0w3tUCSUhNe1ILu7HR55KVH0kS3l4Yvp6Z0QRCBXOLhEhBsXXfMPBZYQopc2chkS9BUHqa2LdYagpToIoTfrlcqpHm7d6CqSksgLo8SW6fHJ4tWJjCBLDgpOviGDswMYU9YLeK3qMo+rleHxA6eA7sTUECprvZrNSf/PWqBRukKXCGg4iQSmDH9zYIrT2bcVMIMRaPhDy+BLH3/ITQxrNxaAq5arIOT9XfzSFvkla5KTRZEz2N6/FbPO8ljdCW0d27DJs28+PT7wHb9oWUYRqIZXU6HkZ/PG/wJel66UDvjCuCehBn3/ctWPWFDNh1Jx1dtecMsr4wnqQKtGQ7dRFUOhmjr+Qy26r6DbXNZP5ftUUWrOhFjP4BvGomkfw/y7IAAAAASUVORK5CYII=
 
 [webpackImg]: https://max-im.github.io/pages/resursable/src/assets/icons/webpack.svg
 [gulpImg]: https://max-im.github.io/pages/resursable/src/assets/icons/gulp.svg

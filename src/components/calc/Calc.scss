@@ -68,7 +68,11 @@
     font-size: 20px;
     display: block;
   }
+  &__calendarWraper{
+    display: flex;
+  }
 }
 .calendarComp{
   display: inline-block;
+  vertical-align: top;
 }

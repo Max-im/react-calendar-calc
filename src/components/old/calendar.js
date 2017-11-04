@@ -54,7 +54,7 @@ class Calendar extends Component {
 
     
 
-  changeDate(e){
+  changeDate = (e) =>{
     if(e.target.classList.contains('inc')){
       this.setState({
         month: ++this.state.month,
@@ -78,7 +78,7 @@ class Calendar extends Component {
             
               <CalcContainer 
                 get={this.props.get}
-                addMonth={this.changeDate.bind(this)}
+                addMonth={this.changeDate}
                 data={this.state.daysArr}
                 month={this.state.month} />
           </div>
