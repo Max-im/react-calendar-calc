@@ -21,23 +21,26 @@ function CalcContainer({incr, decr, data}) {
   const monthDays = [];
   (() => {
     const lastDay = new Date(data.date.getFullYear(), data.month+1, 0).getDate();
-    const firstWeekDay = new Date(data.date.getFullYear(), data.month, 1).getDay();
+    const firstWeekDay = new Date(data.date.getFullYear(), data.month, 1).getDay()+1;
     const count = Math.ceil((lastDay + firstWeekDay) / 7) * 7;
 
-    for( let i = 0 ; i < count ; i++ ){
+    for( let i = 1 ; i <= count ; i++ ){
+      const info = new Date(data.date.getFullYear(), data.month, 1 - firstWeekDay + i );
       monthDays.push({
-        dayInfo: new Date(data.date.getFullYear(), data.month, 1 - firstWeekDay + i )
+        current: i < firstWeekDay ?  false : i > lastDay+firstWeekDay-1 ? false : true,
+        dayInfo: info
       })
     } 
        
   })() 
   
 
-  const daysList = monthDays.map( item => {
+  const daysList = monthDays.map( (item, i) => {
     return (
       <li
-        key={item.id}>
-        {moment(item.dayInfo).format('D')}
+        className={item.current ? '' : 'calc__calendarEmpty'}
+        key={i}>
+        { moment( item.dayInfo ).format('D') }
       </li>
     )
   })
