@@ -25,6 +25,7 @@ class Calc extends Component {
     }
   }
 
+
   calendarToggle = (e) => {
     const item = e.id === 0 ? 'first' : 'second';
     this.setState({
@@ -40,6 +41,9 @@ class Calc extends Component {
 
   incrMonth = (e) => {
     const item = e.id === 0 ? 'first' : 'second';
+    if(item === 'first' && this.state.second.month === e.month){
+      return
+    };
     this.setState({
       [item]: {
         id: e.id,
@@ -51,7 +55,10 @@ class Calc extends Component {
   }
 
   decrMonth = (e) => {
-   const item = e.id === 0 ? 'first' : 'second';
+    const item = e.id === 0 ? 'first' : 'second';
+    if(item === 'second' && this.state.first.month === e.month){
+      return
+    }; 
     this.setState({
       [item]: {
         id: e.id,
@@ -65,6 +72,28 @@ class Calc extends Component {
 
   newDataChoise = (e) => {
     const item = e.data.id === 0 ? 'first' : 'second';
+    if(item === 'first' && this.state.second.date < e.item.dayInfo){
+      this.setState({
+        first: {
+          id: e.data.id,
+          date: this.state.second.date,
+          show: e.data.show,
+          month: e.data.month
+        }
+      });
+      return;
+    }; 
+    if(item === 'second' && this.state.first.date > e.item.dayInfo){
+      this.setState({
+        second: {
+          id: e.data.id,
+          date: this.state.first.date,
+          show: e.data.show,
+          month: e.data.month
+        }
+      });
+      return;
+    };
     this.setState({
       [item]: {
         id: e.data.id,
@@ -73,6 +102,12 @@ class Calc extends Component {
         month: e.data.month
       }
     });
+  }
+
+  countDiff = () => {
+    this.setState({
+
+    })
   }
 
 
@@ -99,6 +134,7 @@ class Calc extends Component {
                 <h3 className="calc__pickerHeader">days</h3>
                   <span
                     className="calc__pickerOutDate">
+                    { Math.floor((this.state.second.date.getTime() - this.state.first.date.getTime())/1000/60/60/24) }
                   </span>
               </div >
             

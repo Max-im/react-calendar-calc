@@ -25,11 +25,11 @@ function CalcContainer({ incr, decr, data, newDataChoise }) {
     const count = Math.ceil((lastDay + firstWeekDay) / 7) * 7;
 
     for( let i = 1 ; i <= count ; i++ ){
-      const info = new Date(data.date.getFullYear(), data.month, 1 - firstWeekDay + i );
+      const info = new Date(new Date().getFullYear(), data.month, 1 - firstWeekDay + i );
       monthDays.push({
         action: moment(info).format('DD,MM,YY') === moment(data.date).format('DD,MM,YY') ? true : false,
         current: i < firstWeekDay ?  false : i > lastDay+firstWeekDay-1 ? false : true,
-        dayInfo: info
+        dayInfo: info,
       })
     } 
        
