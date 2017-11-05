@@ -7,7 +7,7 @@ import chevron from '../../assets/down.svg';
 
 const days = ['s', 'm', 't', 'w', 't', 'f', 's'];
 
-function CalcContainer({ incr, decr, data, newDataChoise }) {
+function CalcContainer({ incr, decr, data, newDataChoise, additional }) {
   const daysNameList = days.map( (item, i) => {
     return ( 
       <li 
@@ -27,9 +27,12 @@ function CalcContainer({ incr, decr, data, newDataChoise }) {
     for( let i = 1 ; i <= count ; i++ ){
       const info = new Date(new Date().getFullYear(), data.month, 1 - firstWeekDay + i );
       monthDays.push({
-        action: moment(info).format('DD,MM,YY') === moment(data.date).format('DD,MM,YY') ? true : false,
+        action: moment(info).format('DD,MM,YY') === moment(data.date).format('DD,MM,YY') ||
+          moment(info).format('DD,MM,YY') === moment(additional.date).format('DD,MM,YY')  ? true : false,
         current: i < firstWeekDay ?  false : i > lastDay+firstWeekDay-1 ? false : true,
         dayInfo: info,
+        middle: moment(info).format('DD,MM,YY') > moment(data.date).format('DD,MM,YY') ||
+          moment(info).format('DD,MM,YY') < moment(additional.date).format('DD,MM,YY')  ? true : false,
       })
     } 
        
@@ -42,10 +45,10 @@ function CalcContainer({ incr, decr, data, newDataChoise }) {
         className={ item.action ? 'calc__point' : '' }
         onClick={ newDataChoise.bind(this, {data, item}) }
         key={i}>
-        <span 
-          className={ item.current ? 'calc__calendarDate' : 'calc__calendarEmpty' }
-        >
-          { moment( item.dayInfo ).format('D') }
+        <span className={ item.current ? 'calc__calendarDate' : 'calc__calendarEmpty' }>
+          <span className={ item.middle ? '' : 'calc__mark'}>
+            { moment( item.dayInfo ).format('D') }
+          </span>
         </span>
       </li>
     )

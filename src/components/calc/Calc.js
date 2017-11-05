@@ -146,6 +146,7 @@ class Calc extends Component {
             <div className={this.state.first.show ? '' : 'hide'}>
               <CalcContainer 
                 data={this.state.first}
+                additional={this.state.second}
                 incr={this.incrMonth}
                 decr={this.decrMonth}
                 newDataChoise={this.newDataChoise}
@@ -156,6 +157,7 @@ class Calc extends Component {
               <CalcContainer 
                 className={this.state.second.show ? '' : 'hide'}
                 data={this.state.second}
+                additional={this.state.first}
                 incr={this.incrMonth}
                 decr={this.decrMonth}
                 newDataChoise={this.newDataChoise}
