@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './About.css';
-import AboutElem from '../aboutElem/AboutElem';
-import setup from '../../assets/setup.svg';
-import run from '../../assets/run.svg';
-import tech from '../../assets/tech.svg';
+import AboutElem from './../aboutElem/AboutElem';
+import setup from './../../assets/setup.svg';
+import run from './../../assets/run.svg';
+import tech from './../../assets/tech.svg';
 
 const data = [
   { 
@@ -54,7 +54,7 @@ class About extends Component {
         key={item.title} 
         onClick={this.toggleState}
         className="about__block">
-          <img alt={item.title} src= {data[index].img} className="about__img" />
+          <img alt={item.title} src={'./'+data[index].img} className="about__img" />
 
           <div>
             <h3 className="about__title">{item.title}</h3>

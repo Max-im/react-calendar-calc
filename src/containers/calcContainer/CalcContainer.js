@@ -74,7 +74,7 @@ function CalcContainer({ incr, decr, data, newDataChoise, additional }) {
         <img 
           onClick={decr.bind(this, data)}
           className={"calc__calendarBtn dec"} 
-          src={chevron}
+          src={'./'+chevron}
           alt="chevron"
         />
         
@@ -85,7 +85,7 @@ function CalcContainer({ incr, decr, data, newDataChoise, additional }) {
         <img 
           onClick={incr.bind(this, data)}
           className="calc__calendarBtn inc" 
-          src={chevron}
+          src={'./'+chevron}
           alt="chevron"
         />
       </div>

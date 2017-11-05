@@ -7,7 +7,7 @@ function ContactContainer(props) {
       <div className="contactContainer__content">
         <img 
           alt={ item.name } 
-          src={ item.img } 
+          src={ './'+item.img } 
           className="contactContainer__img" />
         <span className="contactContainer__title">{ item.name }  </span>
       </div>

@@ -35,8 +35,8 @@ class AboutElem extends Component {
         <div 
             onClick={this.toggleState.bind(this)}
             className="about__btnWrap">
-            <img alt="chevron" src={up} className={this.state.show ? 'about__btn' : 'hide'}/>
-            <img alt="chevron" src={down} className={this.state.show ? 'hide' : 'about__btn'}/>
+            <img alt="chevron" src={'./'+up} className={this.state.show ? 'about__btn' : 'hide'}/>
+            <img alt="chevron" src={'./'+down} className={this.state.show ? 'hide' : 'about__btn'}/>
         </div>
       </div>
     );
