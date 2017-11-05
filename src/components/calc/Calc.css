@@ -5,7 +5,8 @@
     .calc__calendar:hover {
       box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); }
   .calc__pickerBlock {
-    display: flex; }
+    display: flex;
+    margin: 0 0 30px 0; }
   .calc__pickerInputBlock {
     display: flex; }
   .calc__pickerEl {
@@ -15,15 +16,15 @@
     cursor: pointer;
     box-sizing: border-box;
     position: relative;
-    border-radius: 5px 0 0 5px; }
+    border-radius: 0 5px 5px 0; }
     .calc__pickerEl:hover {
       background: #fff;
-      box-shadow: -2px 1px 3px rgba(0, 0, 0, 0.3); }
-    .calc__pickerEl:last-child {
-      border-radius: 0 5px 5px 0; }
-      .calc__pickerEl:last-child:hover {
-        box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.3); }
-      .calc__pickerEl:last-child:after {
+      box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.3); }
+    .calc__pickerEl:first-child {
+      border-radius: 5px 0 0 5px; }
+      .calc__pickerEl:first-child:hover {
+        box-shadow: -2px 1px 3px rgba(0, 0, 0, 0.3); }
+      .calc__pickerEl:first-child:after {
         content: '';
         position: absolute;
         width: 10px;
@@ -31,7 +32,7 @@
         z-index: 1;
         background: #f1f2f3;
         top: calc( 50% - 5px);
-        left: -5px;
+        right: -5px;
         transform: rotate(45deg); }
   .calc__pickerHeader {
     text-transform: uppercase;
@@ -56,7 +57,8 @@
     font-size: 20px;
     display: block; }
   .calc__calendarWraper {
-    display: flex; }
+    display: flex;
+    margin: 0 20px 0 0; }
 
 .calendarComp {
   display: inline-block;

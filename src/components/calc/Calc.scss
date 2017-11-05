@@ -8,6 +8,7 @@
   }
   &__pickerBlock{
     display: flex;
+    margin: 0 0 30px 0;
   }
   &__pickerInputBlock{
     display: flex;
@@ -19,15 +20,15 @@
     cursor: pointer;
     box-sizing: border-box;
     position: relative;
-    border-radius: 5px 0 0 5px;
+    border-radius: 0 5px 5px 0;
     &:hover{
       background: #fff;
-      box-shadow: -2px 1px 3px rgba(0,0,0,.3);
+      box-shadow: 2px 1px 3px rgba(0,0,0,.3);
     }
-    &:last-child{
-      border-radius: 0 5px 5px 0;
+    &:first-child{
+      border-radius: 5px 0 0 5px;
       &:hover{
-        box-shadow: 2px 1px 3px rgba(0,0,0,.3);
+        box-shadow: -2px 1px 3px rgba(0,0,0,.3);
       }
       &:after{
         content: '';
@@ -37,7 +38,7 @@
         z-index: 1;
         background: rgb(241,242,243);
         top: calc( 50% - 5px );
-        left: -5px;
+        right: -5px;
         transform: rotate(45deg);
       }
     }
@@ -70,6 +71,7 @@
   }
   &__calendarWraper{
     display: flex;
+    margin: 0 20px 0 0;
   }
 }
 .calendarComp{

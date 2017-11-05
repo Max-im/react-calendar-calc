@@ -17,7 +17,6 @@ function CalcContainer({ incr, decr, data, newDataChoise, additional }) {
       </li>
     )
   });
-
   const monthDays = [];
   (() => {
     const lastDay = new Date(data.date.getFullYear(), data.month+1, 0).getDate();
@@ -26,13 +25,27 @@ function CalcContainer({ incr, decr, data, newDataChoise, additional }) {
 
     for( let i = 1 ; i <= count ; i++ ){
       const info = new Date(new Date().getFullYear(), data.month, 1 - firstWeekDay + i );
+      const action = moment(info).format('DD,MM,YY') === moment(data.date).format('DD,MM,YY') ||
+          moment(info).format('DD,MM,YY') === moment(additional.date).format('DD,MM,YY');
+      const middle = () => {
+        if(moment(info).format('YY MM DD') < moment(data.date).format('YY MM DD')){
+          if(moment(info).format('YY MM DD') > moment(additional.date).format('YY MM DD')){
+            return true;
+          }
+        }
+        if(moment(info).format('YY MM DD') > moment(data.date).format('YY MM DD')){
+          if(moment(info).format('YY MM DD') < moment(additional.date).format('YY MM DD')){
+            return true;
+          }
+        }
+        return false;
+      }
+              
       monthDays.push({
-        action: moment(info).format('DD,MM,YY') === moment(data.date).format('DD,MM,YY') ||
-          moment(info).format('DD,MM,YY') === moment(additional.date).format('DD,MM,YY')  ? true : false,
+        action: action ? true : false,
         current: i < firstWeekDay ?  false : i > lastDay+firstWeekDay-1 ? false : true,
         dayInfo: info,
-        middle: moment(info).format('DD,MM,YY') > moment(data.date).format('DD,MM,YY') ||
-          moment(info).format('DD,MM,YY') < moment(additional.date).format('DD,MM,YY')  ? true : false,
+        middle: middle() ? true : false,
       })
     } 
        
@@ -42,14 +55,14 @@ function CalcContainer({ incr, decr, data, newDataChoise, additional }) {
   const daysList = monthDays.map( (item, i) => {
     return (
       <li
-        className={ item.action ? 'calc__point' : '' }
-        onClick={ newDataChoise.bind(this, {data, item}) }
+        className={ item.action ? 'calc__point' : item.middle ? 'calc__mark' : '' }
+        onClick={ item.current ? newDataChoise.bind(this, {data, item}) : '' }
         key={i}>
+        <div>
         <span className={ item.current ? 'calc__calendarDate' : 'calc__calendarEmpty' }>
-          <span className={ item.middle ? '' : 'calc__mark'}>
             { moment( item.dayInfo ).format('D') }
-          </span>
         </span>
+        </div>
       </li>
     )
   })

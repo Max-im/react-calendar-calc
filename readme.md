@@ -57,9 +57,10 @@
 | 6     	| Create NotFound (404) component			       	| 1 		|
 | 7       | Create About component                      | 4     |
 | 8       | Create Calc component                       | 12    |
-| 9   		| Create Contacts component			              | 3 		|
-| 10    	| Create Footer component					           	| 1		  |
-| 11	    | Refactoring, add microdata, correct readme	| 4 		|
+| 9       | Rewrith all the Calc component              | 5     |
+| 10   		| Create Contacts component			              | 3 		|
+| 11    	| Create Footer component					           	| 1		  |
+| 12	    | Refactoring, add microdata, correct readme	| 4 		|
 |    	  	| TOTAL						                  					| __25__|
 
 
