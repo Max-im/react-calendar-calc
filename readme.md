@@ -131,4 +131,4 @@
 [jasmineImg]: https://example
 [phantomeImg]: https://example
 [BaaSImg]: https://example
-[momentImg]: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAMFBMVEX///9hsqfw9/ZyurCDwrr2+/qRycHB4Nzn8/HR6OWj0stntaqu19L6/Px4vbSIxb0G5GWZAAAA6klEQVQ4jYVT2xKFIAikzFJM/f+/PQFmHHTGfXAS1oW4AHTkiLWkVCrGDCN2TFtHwt24863cTLn/VPZjG3AokeDY5DAG70PEdg39PRvc9b24xNI0MuufXm7bRqc/OYrkcdM3vo+FAIBkvTkA5X+CJQBppL1RnR8J3olwJgGVXyfARRIZIgnAjAAkETkCzgniqkybEki8QnnOMCeEx1WAcvRzgqcsFeHtkiF8IQaChLBJKkiS9jcVxGULpSCFsqX+0Eptm/X9Q2uWbXdHb7cZGJ2hDIwZuaavR245tOuxXy/OevVgubysMl3/H5AhB4XxqBxFAAAAAElFTkSuQmCC
+[momentImg]: https://momentjs.com/static/img/moment-favicon.png
