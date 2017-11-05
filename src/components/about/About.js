@@ -65,12 +65,16 @@ class About extends Component {
     )
 
     return (
-      <div className="about">
+      <div className="about" itemScope itemType="http://schema.org/Article">
         <div className="container App__block">
         
-          <h2 className="about__header App__header">About this App</h2>
+          <h2 
+            itemProp="name"
+            className="about__header App__header">
+            About this App
+          </h2>
 
-          <div className="about__contentWrap">
+          <div className="about__contentWrap" itemProp="articleBody">
             {listItem}
           </div>
 

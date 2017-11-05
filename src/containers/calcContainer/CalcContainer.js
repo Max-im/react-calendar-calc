@@ -28,13 +28,13 @@ function CalcContainer({ incr, decr, data, newDataChoise, additional }) {
       const action = moment(info).format('DD,MM,YY') === moment(data.date).format('DD,MM,YY') ||
           moment(info).format('DD,MM,YY') === moment(additional.date).format('DD,MM,YY');
       const middle = () => {
-        if(moment(info).format('YY MM DD') < moment(data.date).format('YY MM DD')){
-          if(moment(info).format('YY MM DD') > moment(additional.date).format('YY MM DD')){
+        if(info.getTime() < data.date.getTime()){
+          if(info.getTime() > additional.date.getTime()){
             return true;
           }
         }
-        if(moment(info).format('YY MM DD') > moment(data.date).format('YY MM DD')){
-          if(moment(info).format('YY MM DD') < moment(additional.date).format('YY MM DD')){
+        if(info.getTime() > data.date.getTime()){
+          if(info.getTime() < additional.date.getTime()){
             return true;
           }
         }
@@ -56,13 +56,11 @@ function CalcContainer({ incr, decr, data, newDataChoise, additional }) {
     return (
       <li
         className={ item.action ? 'calc__point' : item.middle ? 'calc__mark' : '' }
-        onClick={ item.current ? newDataChoise.bind(this, {data, item}) : '' }
+        onClick={ item.current ? newDataChoise.bind(this, {data, item}) : () => {} }
         key={i}>
-        <div>
         <span className={ item.current ? 'calc__calendarDate' : 'calc__calendarEmpty' }>
             { moment( item.dayInfo ).format('D') }
         </span>
-        </div>
       </li>
     )
   })

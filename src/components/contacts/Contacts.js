@@ -50,11 +50,17 @@ const data = [
 class Contacts extends Component {
   render() {
     return (
-      <div className="contacts">
+      <div className="contacts" itemScope itemType="http://schema.org/Article">
         <div className="container App__block"> 
-          <h2 className="App__header">Contact us</h2>
+          <h2 
+            itemProp="name"
+            className="App__header">
+            Contact us
+          </h2>
           
-          <ContactContainer data={data}/>
+          <div itemProp="articleBody">
+            <ContactContainer  data={data}/>
+          </div>
 
         </div>
       </div>

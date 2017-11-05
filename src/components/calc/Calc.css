@@ -59,7 +59,35 @@
   .calc__calendarWraper {
     display: flex;
     margin: 0 20px 0 0; }
+  .calc_active {
+    color: #1367d7; }
+    .calc_active .calc__pickerHeader {
+      color: #1367d7; }
 
 .calendarComp {
   display: inline-block;
   vertical-align: top; }
+
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .calc__calendarWraper {
+    flex-wrap: wrap; }
+  .calc__calendarItem {
+    margin: 20px; } }
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .calc__pickerEl {
+    width: 120px; }
+  .calc__calendarItem {
+    margin: 10px 0; } }
+
+/* Custom, iPhone Retina */
+/*==========  Mobile First Method  ==========*/
+/* Custom, iPhone Retina */
+/* Extra Small Devices, Phones */
+/* Small Devices, Tablets */
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */

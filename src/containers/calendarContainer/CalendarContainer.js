@@ -7,7 +7,7 @@ function CalendarContainer({ calendarToggle, header, data }) {
   return (
     <div
       onClick={ calendarToggle.bind(this, data) } 
-      className="calc__pickerEl">
+      className={data.show ? "calc_active calc__pickerEl" : "calc__pickerEl"}>
       
       <h3 className="calc__pickerHeader">
         { header }

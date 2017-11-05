@@ -41,8 +41,9 @@
  - react-cli ;
  - React ![react][reactImg] / ES6 ![ES6][ES6Img];
  - Router;
+ - Moment.js ![moment.js][momentImg];
  - HTML5 ![html][HTMLImg] / BEM;  
- - Sass (Scss) ![sass][sassImg] / CSS3 ![css][cssImg] ;
+ - Sass (Scss) ![sass][sassImg] / CSS3 ![css][cssImg];
 
 
 
@@ -57,11 +58,11 @@
 | 6     	| Create NotFound (404) component			       	| 1 		|
 | 7       | Create About component                      | 4     |
 | 8       | Create Calc component                       | 12    |
-| 9       | Rewrith all the Calc component              | 5     |
+| 9       | Rewrith all the Calc component              | 6     |
 | 10   		| Create Contacts component			              | 3 		|
 | 11    	| Create Footer component					           	| 1		  |
 | 12	    | Refactoring, add microdata, correct readme	| 4 		|
-|    	  	| TOTAL						                  					| __25__|
+|    	  	| TOTAL						                  					| __39__|
 
 
 
@@ -105,7 +106,7 @@
 
 
 [cssImg]: http://www.css3recipes.com/favicon.png
-[HTMLImg]: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAxlBMVEX////kTSbsTifuXijs8/TkSh7xYiDoTibpVifYpp/+8e/q3t3yYx7rWifkLQDpQwP1o5HyZyTKe3vxTQDyZinkHgD17uzt5OLaqJvosqvxTgDWiHTs7e3lZE3efGPnUibnppbkZETahW7glIDnopj4wLT2rJz39PPjyML4uKnvAADlUy7jAADfa03kdlrkNwDlWDzbt677187yvrXnloz0jW7vIgD14d7nvbjybjnyXgfzdkztgWr1l37oqqLmh3nXjY3ljoUt+utwAAABl0lEQVQ4jd2S63qiMBCGkyExrCnBFhBBxANV0qaCunR13e3B+7+pJcgjoXsHfX9m3uTJfDMIfR8+H6YnKeXpR0v2oPnshCXQUghRui0UNMtOWOEbttVi41UnLOoKow3WXYPv23jRCXt99yo4dwONFvadwBUWVcg14VCTj+K54p0w3tUCSUhNe1ILu7HR55KVH0kS3l4Yvp6Z0QRCBXOLhEhBsXXfMPBZYQopc2chkS9BUHqa2LdYagpToIoTfrlcqpHm7d6CqSksgLo8SW6fHJ4tWJjCBLDgpOviGDswMYU9YLeK3qMo+rleHxA6eA7sTUECprvZrNSf/PWqBRukKXCGg4iQSmDH9zYIrT2bcVMIMRaPhDy+BLH3/ITQxrNxaAq5arIOT9XfzSFvkla5KTRZEz2N6/FbPO8ljdCW0d27DJs28+PT7wHb9oWUYRqIZXU6HkZ/PG/wJel66UDvjCuCehBn3/ctWPWFDNh1Jx1dtecMsr4wnqQKtGQ7dRFUOhmjr+Qy26r6DbXNZP5ftUUWrOhFjP4BvGomkfw/y7IAAAAASUVORK5CYII=
+[HTMLImg]: https://www.westernsydney.edu.au/__data/assets/image/0008/372563/apple-touch-icon.png?v=0.2.2
 
 [webpackImg]: https://max-im.github.io/pages/resursable/src/assets/icons/webpack.svg
 [gulpImg]: https://max-im.github.io/pages/resursable/src/assets/icons/gulp.svg
@@ -130,3 +131,4 @@
 [jasmineImg]: https://example
 [phantomeImg]: https://example
 [BaaSImg]: https://example
+[momentImg]: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAMFBMVEX///9hsqfw9/ZyurCDwrr2+/qRycHB4Nzn8/HR6OWj0stntaqu19L6/Px4vbSIxb0G5GWZAAAA6klEQVQ4jYVT2xKFIAikzFJM/f+/PQFmHHTGfXAS1oW4AHTkiLWkVCrGDCN2TFtHwt24863cTLn/VPZjG3AokeDY5DAG70PEdg39PRvc9b24xNI0MuufXm7bRqc/OYrkcdM3vo+FAIBkvTkA5X+CJQBppL1RnR8J3olwJgGVXyfARRIZIgnAjAAkETkCzgniqkybEki8QnnOMCeEx1WAcvRzgqcsFeHtkiF8IQaChLBJKkiS9jcVxGULpSCFsqX+0Eptm/X9Q2uWbXdHb7cZGJ2hDIwZuaavR245tOuxXy/OevVgubysMl3/H5AhB4XxqBxFAAAAAElFTkSuQmCC

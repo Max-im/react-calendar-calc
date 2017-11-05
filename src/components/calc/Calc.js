@@ -12,13 +12,13 @@ class Calc extends Component {
     this.state = {
       first: { 
         id: 0,
-        show: true,
+        show: false,
         date: new Date(),
         month: new Date().getMonth()
       },
       second: { 
         id: 1,
-        show: true,
+        show: false,
         date: new Date(),
         month: new Date().getMonth()
       }
@@ -113,11 +113,15 @@ class Calc extends Component {
 
   render() {
     return (
-     <div className="calc">
+     <div className="calc" itemScope itemType="http://schema.org/Article">
       <div className="container App__block">
-          <h2 className="App__header">Calendar</h2>
+          <h2 
+            itemProp="name"
+            className="App__header">
+            Calendar
+          </h2>
           
-          <div className="calc__content">
+          <div className="calc__content" itemProp="articleBody">
             <div className="calc__pickerBlock">
 
               <CalendarContainer 
@@ -139,33 +143,32 @@ class Calc extends Component {
               </div >
             
             </div>
-          </div>
-        
-          <div className="calc__calendarWraper">
-            
-            <div className={this.state.first.show ? '' : 'hide'}>
-              <CalcContainer 
-                data={this.state.first}
-                additional={this.state.second}
-                incr={this.incrMonth}
-                decr={this.decrMonth}
-                newDataChoise={this.newDataChoise}
-              />
+          
+            <div className="calc__calendarWraper">
+              
+              <div className={this.state.first.show ? 'calc__calendarItem' : 'hide'}>
+                <CalcContainer 
+                  data={this.state.first}
+                  additional={this.state.second}
+                  incr={this.incrMonth}
+                  decr={this.decrMonth}
+                  newDataChoise={this.newDataChoise}
+                />
+              </div>
+
+              <div className={this.state.second.show ? 'calc__calendarItem' : 'hide'}>
+                <CalcContainer 
+                  data={this.state.second}
+                  additional={this.state.first}
+                  incr={this.incrMonth}
+                  decr={this.decrMonth}
+                  newDataChoise={this.newDataChoise}
+                />
+              </div>
+
             </div>
 
-            <div className={this.state.second.show ? '' : 'hide'}>
-              <CalcContainer 
-                className={this.state.second.show ? '' : 'hide'}
-                data={this.state.second}
-                additional={this.state.first}
-                incr={this.incrMonth}
-                decr={this.decrMonth}
-                newDataChoise={this.newDataChoise}
-              />
-            </div>
-
           </div>
-
         </div>
   
       </div>

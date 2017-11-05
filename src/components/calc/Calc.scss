@@ -13,36 +13,36 @@
   &__pickerInputBlock{
     display: flex;
   }
-  &__pickerEl{
-    background: rgb(241,242,243);
-    width: 155px;
-    padding: 10px;
-    cursor: pointer;
-    box-sizing: border-box;
-    position: relative;
-    border-radius: 0 5px 5px 0;
-    &:hover{
-      background: #fff;
-      box-shadow: 2px 1px 3px rgba(0,0,0,.3);
-    }
-    &:first-child{
-      border-radius: 5px 0 0 5px;
+    &__pickerEl{
+      background: rgb(241,242,243);
+      width: 155px;
+      padding: 10px;
+      cursor: pointer;
+      box-sizing: border-box;
+      position: relative;
+      border-radius: 0 5px 5px 0;
       &:hover{
-        box-shadow: -2px 1px 3px rgba(0,0,0,.3);
+        background: #fff;
+        box-shadow: 2px 1px 3px rgba(0,0,0,.3);
       }
-      &:after{
-        content: '';
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        z-index: 1;
-        background: rgb(241,242,243);
-        top: calc( 50% - 5px );
-        right: -5px;
-        transform: rotate(45deg);
+      &:first-child{
+        border-radius: 5px 0 0 5px;
+        &:hover{
+          box-shadow: -2px 1px 3px rgba(0,0,0,.3);
+        }
+        &:after{
+          content: '';
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          z-index: 1;
+          background: rgb(241,242,243);
+          top: calc( 50% - 5px );
+          right: -5px;
+          transform: rotate(45deg);
+        }
       }
     }
-  }
   &__pickerHeader{
     text-transform: uppercase;
     font-size: 9px;
@@ -73,8 +73,135 @@
     display: flex;
     margin: 0 20px 0 0;
   }
+  &_active{
+    color: #1367d7;
+    .calc__pickerHeader{
+      color: #1367d7;
+    }
+  }
 }
 .calendarComp{
   display: inline-block;
   vertical-align: top;
+}
+
+
+
+
+ /* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+  
+
+
+}
+
+
+
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  
+
+
+}
+
+
+
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+.calc{
+  &__calendarWraper{
+    flex-wrap: wrap;
+  }
+  &__calendarItem{
+    margin: 20px;
+  }
+}
+ 
+}
+
+
+
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+.calc{
+  &__pickerEl{
+    width: 120px;
+  }
+  &__calendarItem{
+    margin: 10px 0;
+  }
+}
+
+}
+
+
+
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+
+
+}
+
+
+
+
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+
+
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+
+
+
+}
+
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+
+
+}
+
+
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+
+
+}
+
+
+
+
+
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+
+
 }

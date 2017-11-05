@@ -78,8 +78,18 @@
 
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .calc__calendarWrap {
+    width: 280px;
+    padding: 20px; } }
+
 /* Small Devices, Tablets */
 /* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .calc__calendarWrap {
+    width: 280px;
+    padding: 10px; } }
+
 /* Custom, iPhone Retina */
 /*==========  Mobile First Method  ==========*/
 /* Custom, iPhone Retina */

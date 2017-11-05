@@ -98,7 +98,14 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-  
+.calc{
+  &__calendarWrap{
+    width: 280px;
+    padding: 20px;
+  }
+ 
+}
+
 
 
 }
@@ -121,6 +128,13 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
   
+.calc{
+  &__calendarWrap{
+    width: 280px;
+    padding: 10px;
+  }
+ 
+}
 
  
 
