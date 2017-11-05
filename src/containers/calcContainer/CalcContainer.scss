@@ -41,10 +41,10 @@
   }
   &__calendarDate{
     cursor: pointer;
-    border-radius: 5px;
+    width: 100%;
     &:hover{
-      color: #fff;
-      background: rgb(19,103,215);
+      font-weight: bold;
+      text-shadow: 0 0 3px rgba(0,0,0,.5);
     }
   }
   &__calendarEmpty{
@@ -53,6 +53,7 @@
   &__point{
     color: #fff;
     position: relative;
+    border-radius: 5px;
     background: rgb(19,103,215);
     &:after{
       content: '.';

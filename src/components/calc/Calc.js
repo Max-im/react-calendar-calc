@@ -63,6 +63,19 @@ class Calc extends Component {
   }
 
 
+  newDataChoise = (e) => {
+    const item = e.data.id === 0 ? 'first' : 'second';
+    this.setState({
+      [item]: {
+        id: e.data.id,
+        date: e.item.dayInfo,
+        show: e.data.show,
+        month: e.data.month
+      }
+    });
+  }
+
+
   render() {
     return (
      <div className="calc">
@@ -99,6 +112,7 @@ class Calc extends Component {
                 data={this.state.first}
                 incr={this.incrMonth}
                 decr={this.decrMonth}
+                newDataChoise={this.newDataChoise}
               />
             </div>
 
@@ -108,6 +122,7 @@ class Calc extends Component {
                 data={this.state.second}
                 incr={this.incrMonth}
                 decr={this.decrMonth}
+                newDataChoise={this.newDataChoise}
               />
             </div>
 

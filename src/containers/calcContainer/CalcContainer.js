@@ -7,7 +7,7 @@ import chevron from '../../assets/down.svg';
 
 const days = ['s', 'm', 't', 'w', 't', 'f', 's'];
 
-function CalcContainer({incr, decr, data}) {
+function CalcContainer({ incr, decr, data, newDataChoise }) {
   const daysNameList = days.map( (item, i) => {
     return ( 
       <li 
@@ -27,6 +27,7 @@ function CalcContainer({incr, decr, data}) {
     for( let i = 1 ; i <= count ; i++ ){
       const info = new Date(data.date.getFullYear(), data.month, 1 - firstWeekDay + i );
       monthDays.push({
+        action: moment(info).format('DD,MM,YY') === moment(data.date).format('DD,MM,YY') ? true : false,
         current: i < firstWeekDay ?  false : i > lastDay+firstWeekDay-1 ? false : true,
         dayInfo: info
       })
@@ -38,9 +39,14 @@ function CalcContainer({incr, decr, data}) {
   const daysList = monthDays.map( (item, i) => {
     return (
       <li
-        className={item.current ? '' : 'calc__calendarEmpty'}
+        className={ item.action ? 'calc__point' : '' }
+        onClick={ newDataChoise.bind(this, {data, item}) }
         key={i}>
-        { moment( item.dayInfo ).format('D') }
+        <span 
+          className={ item.current ? 'calc__calendarDate' : 'calc__calendarEmpty' }
+        >
+          { moment( item.dayInfo ).format('D') }
+        </span>
       </li>
     )
   })
