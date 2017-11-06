@@ -42,7 +42,7 @@
  - React ![react][reactImg] / ES6 ![ES6][ES6Img];
  - Router;
  - Moment.js ![moment.js][momentImg];
- - HTML5 ![html][HTMLImg] / BEM;  
+ - HTML5 ![html][HTMLImg] / BEM / OpenGraph / Schema;  
  - Sass (Scss) ![sass][sassImg] / CSS3 ![css][cssImg];
 
 
