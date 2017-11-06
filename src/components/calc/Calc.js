@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import moment from 'moment';
+
 
 import './Calc.css';
 import CalendarContainer from '../../containers/calendarContainer/CalendarContainer';

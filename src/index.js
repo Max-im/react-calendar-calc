@@ -9,7 +9,7 @@ import App from './components/app/App';
 import About from './components/about/About';
 import Calc from './components/calc/Calc';
 import Contacts from './components/contacts/Contacts';
-import NotFound from './containers/notFound/NotFound';
+import NotFound from './components/notFound/NotFound';
 
 
 ReactDOM.render(

@@ -23,10 +23,17 @@ function CalcContainer({ incr, decr, data, newDataChoise, additional }) {
     const firstWeekDay = new Date(data.date.getFullYear(), data.month, 1).getDay()+1;
     const count = Math.ceil((lastDay + firstWeekDay) / 7) * 7;
 
+    const form = (val) => {
+      return moment(val).format('YY MM DD');
+    }
+
     for( let i = 1 ; i <= count ; i++ ){
+      
       const info = new Date(new Date().getFullYear(), data.month, 1 - firstWeekDay + i );
-      const action = moment(info).format('DD,MM,YY') === moment(data.date).format('DD,MM,YY') ||
-          moment(info).format('DD,MM,YY') === moment(additional.date).format('DD,MM,YY');
+      
+      const action = form(info) === form(data.date) || form(info) === form(additional.date);
+      
+
       const middle = () => {
         if(info.getTime() < data.date.getTime()){
           if(info.getTime() > additional.date.getTime()){
@@ -43,7 +50,7 @@ function CalcContainer({ incr, decr, data, newDataChoise, additional }) {
               
       monthDays.push({
         action: action ? true : false,
-        current: i < firstWeekDay ?  false : i > lastDay+firstWeekDay-1 ? false : true,
+        current: i < firstWeekDay ?  false : i > lastDay + firstWeekDay - 1 ? false : true,
         dayInfo: info,
         middle: middle() ? true : false,
       })
