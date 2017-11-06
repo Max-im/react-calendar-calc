@@ -10,8 +10,8 @@ const data = [
     title: 'SetUp the App',
     img: setup,
     list: [
-      { name: 'git clone the repo' },
-      { name: 'cd repo dir' },
+      { name: 'git clone the repo: git clone https://github.com/Max-im/react-calendar-calc.git' },
+      { name: 'cd react-calendar-calc' },
       { name: 'npm i' }
     ]
   },
@@ -32,7 +32,8 @@ const data = [
       { name: 'React / ES6' },
       { name: 'React-router' },
       { name: 'Sass (Scss) / CSS3' },
-      { name: 'HTML5' }
+      { name: 'HTML5' },
+      { name: 'OpenGraph / Schema' }
     ]
   }
 ]
