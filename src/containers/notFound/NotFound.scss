@@ -1,3 +1,31 @@
+.flex{
+  display: flex;
+  height: 100%;
+
+}
+
+
+.notFound{
+  height: 100%;
+  color: #333;
+  &__content{
+    margin: auto;
+    text-align: center;
+  }
+  &__txt{
+    text-transform: uppercase;
+    font-size: 50px;
+  }
+  &__err{
+    color: red;
+    font-size: 100px;
+    letter-spacing: 20px;
+    line-height: 50px;
+  }
+}
+
+
+
 
  /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
@@ -25,13 +53,32 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
  
+.notFound{
+  &__txt{
+    font-size: 30px;
+  }
+  &__err{
+    font-size: 80px;
+    letter-spacing: 10px;
+    line-height: 50px;
+  }
+}
 
 }
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
- 
+ .notFound{
+  &__txt{
+    font-size: 30px;
+    line-height: 30px;
+  }
+  &__err{
+    font-size: 80px;
+    line-height: 80px;
+  }
+}
 
 }
 

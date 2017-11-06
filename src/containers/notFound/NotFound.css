@@ -1,7 +1,42 @@
+.flex {
+  display: flex;
+  height: 100%; }
+
+.notFound {
+  height: 100%;
+  color: #333; }
+  .notFound__content {
+    margin: auto;
+    text-align: center; }
+  .notFound__txt {
+    text-transform: uppercase;
+    font-size: 50px; }
+  .notFound__err {
+    color: red;
+    font-size: 100px;
+    letter-spacing: 20px;
+    line-height: 50px; }
+
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */
 /* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .notFound__txt {
+    font-size: 30px; }
+  .notFound__err {
+    font-size: 80px;
+    letter-spacing: 10px;
+    line-height: 50px; } }
+
 /* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .notFound__txt {
+    font-size: 30px;
+    line-height: 30px; }
+  .notFound__err {
+    font-size: 80px;
+    line-height: 80px; } }
+
 /* Custom, iPhone Retina */
 /*==========  Mobile First Method  ==========*/
 /* Custom, iPhone Retina */
