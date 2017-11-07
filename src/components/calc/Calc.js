@@ -15,7 +15,7 @@ class Calc extends Component {
       first: { 
         id: 0,
         show: false,
-        date: new Date(),
+        date: new Date(new Date().setHours(0,0,0,0)),
         month: new Date().getMonth()
       },
       second: { 

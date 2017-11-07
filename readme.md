@@ -61,8 +61,8 @@
 | 9       | Rewrith all the Calc component              | 6     |
 | 10   		| Create Contacts component			              | 3 		|
 | 11    	| Create Footer component					           	| 1		  |
-| 12	    | Refactoring, add microdata, correct readme	| 4 		|
-|    	  	| TOTAL						                  					| __39__|
+| 12      | Refactoring, add microdata, correct readme  | 5     |
+|    	  	| TOTAL						                  					| __40__|
 
 
 
