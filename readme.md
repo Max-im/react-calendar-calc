@@ -79,19 +79,8 @@
 
 
 
-[herro]: https://example
-[page]: https://example
-
-
 [AuthorPage]: https://max-im.github.io/
 [Portfolio]: https://max-im.github.io/portfolio/
-
-
-
-[fbImg]: http://thumbpress.com/wp-content/themes/thumbpress-v2/images/fb-icon.png
-[inImg]: https://cache.addthiscdn.com/icons/v2/thumbs/32x32/linkedin.png
-[vkImg]: http://rosa-tv.com/wp-content/themes/newgen/images/linkedin_hover.png
-
 
 
 [myFB]: https://facebook.com/max.pozhidaev.7
@@ -99,36 +88,68 @@
 [myVk]: https://m.vk.com/id8889814
 
 
-[reactImg]: https://i2.wp.com/react.jsnews.io/wp-content/uploads/sites/3/2016/09/cropped-react.png?fit=32%2C32&ssl=1
-[ES6Img]: https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url=https://habrastorage.org/webt/59/cc/76/59cc7600c78a2239379574.jpeg&container=focus&refresh=2592000&resize_w=32
-[sassImg]: https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url=https://habrastorage.org/files/1b0/47c/0d3/1b047c0d34f3441dbf4305b6ce007836.png&container=focus&refresh=2592000&resize_w=32
+[fbImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/facebook.png?raw=true
+[inImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/linkedin.png?raw=true
+[vkImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/vk.png?raw=true
+
+
+[cliImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/cli.png?raw=true
+[webpackImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/webpack.png?raw=true
+[gulpImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/gulp.png?raw=true
+[routerImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/router.png?raw=true
+
+
+[angularImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/angular.png?raw=true
+[reactImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/react.png?raw=true
+[reduxImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/redux.png?raw=true
+[vueImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/vue.png?raw=true
+[ES6Img]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/js.png?raw=true
+
+
+[jQueryImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/jquery.png?raw=true
+[rxImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/rxjs.png?raw=true
+[lodashImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/lodash.png?raw=true
+[momentImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/moment.png?raw=true
+
+
+[mustacheImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/mustache.png?raw=true
+[handlebarsImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/handlebars.png?raw=true
 
 
 
-[cssImg]: http://www.css3recipes.com/favicon.png
-[HTMLImg]: https://www.westernsydney.edu.au/__data/assets/image/0008/372563/apple-touch-icon.png?v=0.2.2
+[HTMLImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/html.png?raw=true
+[bemImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/bem.png?raw=true
+[openGraphImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/openGraph.png?raw=true
+[schemaImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/schema.png?raw=true
 
-[webpackImg]: https://max-im.github.io/pages/resursable/src/assets/icons/webpack.svg
-[gulpImg]: https://max-im.github.io/pages/resursable/src/assets/icons/gulp.svg
-[angularImg]: https://max-im.github.io/pages/resursable/src/assets/icons/ang.svg
-[reduxImg]: https://max-im.github.io/pages/resursable/src/assets/icons/redux.svg
-[vueImg]: https://max-im.github.io/pages/resursable/src/assets/icons/vue.svg
-[jQueryImg]: https://max-im.github.io/pages/resursable/src/assets/icons/jQuery.svg
-[lodashImg]: https://max-im.github.io/pages/resursable/src/assets/icons/lodash.svg
-[rxImg]: https://example
-[axiosImg]: https://max-im.github.io/pages/resursable/src/assets/icons/axios.svg
-[bootstrapImg]: https://max-im.github.io/pages/resursable/src/assets/icons/bootstrap.svg
-[foundationImg]: https://example
-[materialiseImg]: https://max-im.github.io/pages/resursable/src/assets/icons/materialize.svg
-[stylusImg]: https://max-im.github.io/pages/resursable/src/assets/icons/stylus.svg
-[canvasImg]: https://example
-[nodeImg]: https://max-im.github.io/pages/resursable/src/assets/icons/node.svg
-[PHPImg]: https://example
-[mongoDBImg]: https://example
-[SQLImg]: https://example
-[karmaImg]: https://example
-[mochaImg]: https://example
-[jasmineImg]: https://example
-[phantomeImg]: https://example
-[BaaSImg]: https://example
-[momentImg]: https://momentjs.com/static/img/moment-favicon.png
+
+[bootstrapImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/bootstrap.png?raw=true
+[foundationImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/foundation.png?raw=true
+[materialiseImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/materialize.png?raw=true
+[semanticImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/semantic.png?raw=true
+
+
+
+[stylusImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/stylus.png?raw=true
+[sassImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/sass.png?raw=true
+[cssImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/css.png?raw=true
+
+
+[canvasImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/canvas.png?raw=true
+[d3Img]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/d3.png?raw=true
+
+
+[nodeImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/node.png?raw=true
+[PHPImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/php.png?raw=true
+[BaaSImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/baas.png?raw=true
+
+
+[mongoDBImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/mongoDB.png?raw=true
+[SQLImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/sql.png?raw=true
+
+
+
+[karmaImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/karma.png?raw=true
+[mochaImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/mocha.png?raw=true
+[jasmineImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/jasmine.png?raw=true
+[phantomImg]: https://github.com/Max-im/webpack-start-tmpl/blob/master/icons/phantom.png?raw=true
