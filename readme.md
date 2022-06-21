@@ -1,16 +1,12 @@
 # __Calendar-calc__
 
 
-
 ## __App info:__
 | Name        | Calendar-calc |
 | ----------------- | ----------------- |
 | Description		|	Calculates the number of days between two selected dates		|
 | Start date 		|	23.10.2017	|
 | Version			|	1.0.0 			|
-
-
-
 
 
 ## __SetUp the app__
@@ -21,8 +17,6 @@
  - Install all App dependencies:
  	`npm i`
  
-
-
 
 
 ## __Run the App__
